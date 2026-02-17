@@ -96,6 +96,15 @@ def _write_subtitles(lines: List[str], total_duration: float, out_srt: Path) -> 
     out_srt.write_text("\n".join(parts), encoding="utf-8")
 
 
+def _ffmpeg_has_filter(ffmpeg_bin: str, filter_name: str) -> bool:
+    try:
+        out = subprocess.run([ffmpeg_bin, "-hide_banner", "-filters"], capture_output=True, text=True, check=False)
+        text = (out.stdout or "") + "\n" + (out.stderr or "")
+        return filter_name in text
+    except Exception:
+        return False
+
+
 def _audio_duration_sec(path: Path) -> float:
     ffprobe = shutil.which("ffprobe")
     if not ffprobe:
@@ -189,19 +198,30 @@ def render_from_script(script_path: Path) -> Path:
     lower_alpha = float(style["lower_third_bg_alpha"])
     headline_color = str(style["headline_color"])
 
-    # Pro visual pack: b-roll + icon + transition fade + lower-third branding + subtitle style
-    visual_overlay = (
-        "drawbox=x='mod(t*120,1080)':y=80:w=360:h=220:color=0x2563eb@0.15:t=fill,"
-        "drawbox=x='1080-mod(t*90,1400)':y=1460:w=520:h=320:color=0x7c3aed@0.14:t=fill,"
-        "drawbox=x=0:y=0:w=1080:h=180:color=black@0.35:t=fill,"
-        f"drawbox=x=0:y=1740:w=1080:h=180:color={lower_bg}@{lower_alpha}:t=fill,"
-        f"drawbox=x=32:y=200:w=300:h=64:color={accent_color}@0.28:t=fill,"
-        f"drawtext=text='{accent_label}':fontcolor=white:fontsize=28:x=52:y=218,"
-        f"drawtext=text='{headline}':fontcolor={headline_color}:fontsize={headline_fontsize}:x=(w-text_w)/2:y=50,"
-        f"drawtext=text='{watermark}':fontcolor=white@0.82:fontsize=30:x=40:y=1798,"
-        f"subtitles='{srt_escaped}':force_style='FontName=Arial,FontSize={subtitle_fontsize},PrimaryColour=&H00FFFFFF,"
-        "OutlineColour=&H00000000,BackColour=&H50000000,BorderStyle=3,Outline=1.2,Shadow=0,MarginV=120,Alignment=2'"
-    )
+    has_drawtext = _ffmpeg_has_filter(ffmpeg, " drawtext ")
+    has_subtitles = _ffmpeg_has_filter(ffmpeg, " subtitles ")
+    has_xfade = _ffmpeg_has_filter(ffmpeg, " xfade ")
+
+    overlays = [
+        "drawbox=x='mod(t*120,1080)':y=80:w=360:h=220:color=0x2563eb@0.15:t=fill",
+        "drawbox=x='1080-mod(t*90,1400)':y=1460:w=520:h=320:color=0x7c3aed@0.14:t=fill",
+        "drawbox=x=0:y=0:w=1080:h=180:color=black@0.35:t=fill",
+        f"drawbox=x=0:y=1740:w=1080:h=180:color={lower_bg}@{lower_alpha}:t=fill",
+        f"drawbox=x=32:y=200:w=300:h=64:color={accent_color}@0.28:t=fill",
+    ]
+    if has_drawtext:
+        overlays += [
+            f"drawtext=text='{accent_label}':fontcolor=white:fontsize=28:x=52:y=218",
+            f"drawtext=text='{headline}':fontcolor={headline_color}:fontsize={headline_fontsize}:x=(w-text_w)/2:y=50",
+            f"drawtext=text='{watermark}':fontcolor=white@0.82:fontsize=30:x=40:y=1798",
+        ]
+    if has_subtitles:
+        overlays += [
+            f"subtitles='{srt_escaped}':force_style='FontName=Arial,FontSize={subtitle_fontsize},PrimaryColour=&H00FFFFFF,"
+            "OutlineColour=&H00000000,BackColour=&H50000000,BorderStyle=3,Outline=1.2,Shadow=0,MarginV=120,Alignment=2'"
+        ]
+
+    visual_overlay = ",".join(overlays)
 
     if use_broll:
         cmd = [ffmpeg, "-y"]
@@ -222,7 +242,7 @@ def render_from_script(script_path: Path) -> Path:
                 f"[v{i}]"
             )
 
-        if clip_count == 1:
+        if clip_count == 1 or not has_xfade:
             base_label = "v0"
         else:
             chains.append(f"[v0][v1]xfade=transition=fade:duration={transition}:offset={max(0.1, seg - transition):.3f}[x1]")
