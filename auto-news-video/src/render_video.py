@@ -1,4 +1,5 @@
 import datetime as dt
+import json
 import re
 import shutil
 import subprocess
@@ -12,6 +13,7 @@ OUTPUTS = ROOT / "outputs"
 ASSETS = ROOT / "assets"
 BROLL_DIR = ASSETS / "broll"
 BGM_FILE = ASSETS / "bgm.mp3"
+STYLE_FILE = ROOT / "config" / "style.json"
 
 
 def _clean_lines(script_text: str) -> List[str]:
@@ -124,6 +126,28 @@ def _safe_drawtext_text(s: str) -> str:
     return s.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
 
 
+def _load_style() -> dict:
+    defaults = {
+        "channel_name": "News Flash VN",
+        "watermark": "@newsflashvn",
+        "headline_color": "white",
+        "accent_label": "TREND NOW",
+        "accent_color_hex": "0xf59e0b",
+        "lower_third_bg_hex": "0x000000",
+        "lower_third_bg_alpha": 0.38,
+        "subtitle_fontsize": 18,
+        "headline_fontsize": 56,
+    }
+    if not STYLE_FILE.exists():
+        return defaults
+    try:
+        custom = json.loads(STYLE_FILE.read_text(encoding="utf-8"))
+        defaults.update({k: v for k, v in custom.items() if k in defaults})
+    except Exception:
+        pass
+    return defaults
+
+
 def render_from_script(script_path: Path) -> Path:
     if not script_path.exists():
         raise FileNotFoundError(f"Missing script file: {script_path}")
@@ -147,22 +171,34 @@ def render_from_script(script_path: Path) -> Path:
     duration = _audio_duration_sec(audio_path)
     _write_subtitles(lines, duration, srt_path)
 
+    style = _load_style()
     headline = _safe_drawtext_text(_extract_headline(script_text)[:90])
+    watermark = _safe_drawtext_text(str(style["watermark"]))
+    accent_label = _safe_drawtext_text(str(style["accent_label"]))
     srt_escaped = str(srt_path).replace("\\", "/").replace("'", "\\'")
 
     broll_candidates = sorted([p for p in BROLL_DIR.glob("*.mp4") if p.is_file()]) if BROLL_DIR.exists() else []
     use_broll = len(broll_candidates) > 0
     use_bgm = BGM_FILE.exists()
 
-    # Pro visual pack: b-roll + icon + transition fade + subtitle style
+    subtitle_fontsize = int(style["subtitle_fontsize"])
+    headline_fontsize = int(style["headline_fontsize"])
+    accent_color = str(style["accent_color_hex"])
+    lower_bg = str(style["lower_third_bg_hex"])
+    lower_alpha = float(style["lower_third_bg_alpha"])
+    headline_color = str(style["headline_color"])
+
+    # Pro visual pack: b-roll + icon + transition fade + lower-third branding + subtitle style
     visual_overlay = (
         "drawbox=x='mod(t*120,1080)':y=80:w=360:h=220:color=0x2563eb@0.15:t=fill,"
         "drawbox=x='1080-mod(t*90,1400)':y=1460:w=520:h=320:color=0x7c3aed@0.14:t=fill,"
         "drawbox=x=0:y=0:w=1080:h=180:color=black@0.35:t=fill,"
-        "drawbox=x=32:y=200:w=250:h=64:color=0xf59e0b@0.28:t=fill,"
-        "drawtext=text='TREND NOW':fontcolor=white:fontsize=28:x=52:y=218,"
-        f"drawtext=text='{headline}':fontcolor=white:fontsize=56:x=(w-text_w)/2:y=50,"
-        f"subtitles='{srt_escaped}':force_style='FontName=Arial,FontSize=18,PrimaryColour=&H00FFFFFF,"
+        f"drawbox=x=0:y=1740:w=1080:h=180:color={lower_bg}@{lower_alpha}:t=fill,"
+        f"drawbox=x=32:y=200:w=300:h=64:color={accent_color}@0.28:t=fill,"
+        f"drawtext=text='{accent_label}':fontcolor=white:fontsize=28:x=52:y=218,"
+        f"drawtext=text='{headline}':fontcolor={headline_color}:fontsize={headline_fontsize}:x=(w-text_w)/2:y=50,"
+        f"drawtext=text='{watermark}':fontcolor=white@0.82:fontsize=30:x=40:y=1798,"
+        f"subtitles='{srt_escaped}':force_style='FontName=Arial,FontSize={subtitle_fontsize},PrimaryColour=&H00FFFFFF,"
         "OutlineColour=&H00000000,BackColour=&H50000000,BorderStyle=3,Outline=1.2,Shadow=0,MarginV=120,Alignment=2'"
     )
 

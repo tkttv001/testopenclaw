@@ -1,4 +1,5 @@
 import json
+import random
 import sqlite3
 import datetime as dt
 from pathlib import Path
@@ -21,6 +22,7 @@ RSS_SOURCES = [
 TREND_SOURCES = [
     "https://trends.google.com/trending/rss?geo=VN",
 ]
+STYLE_FILE = ROOT / "config" / "style.json"
 
 
 def init_storage() -> None:
@@ -127,11 +129,31 @@ def pick_top(items: List[Dict], trends: List[str], top_k: int = 3) -> List[Dict]
     return ranked[:top_k]
 
 
+def _load_hook_templates() -> List[str]:
+    default_hooks = [
+        "Tin đang được quan tâm mạnh hôm nay:",
+        "Đây là tin nóng bạn nên biết:",
+        "Cập nhật nhanh 60 giây về tin nổi bật:",
+    ]
+    if not STYLE_FILE.exists():
+        return default_hooks
+    try:
+        data = json.loads(STYLE_FILE.read_text(encoding="utf-8"))
+        hooks = data.get("hook_templates", [])
+        if isinstance(hooks, list) and hooks:
+            return [str(h).strip() for h in hooks if str(h).strip()]
+    except Exception:
+        pass
+    return default_hooks
+
+
 def build_script(top_news: List[Dict], trends: List[str]) -> str:
     if not top_news:
         return "Hôm nay chưa có tin nổi bật phù hợp niche."
 
     main = top_news[0]
+    hook_prefix = random.choice(_load_hook_templates())
+
     trend_line = ""
     if main.get("trend_hits"):
         trend_line = f"- Trend match: {', '.join(main['trend_hits'][:2])}"
@@ -139,7 +161,7 @@ def build_script(top_news: List[Dict], trends: List[str]) -> str:
         trend_line = f"- Trend tham khảo hôm nay: {', '.join(trends[:2])}"
 
     lines = [
-        f"Hook: Tin đang được quan tâm mạnh hôm nay: {main['title']}",
+        f"Hook: {hook_prefix} {main['title']}",
         "",
         "Nội dung chính:",
         f"- Nguồn: {main['source']}",

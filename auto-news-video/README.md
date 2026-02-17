@@ -20,6 +20,7 @@ Kết quả:
 ## Pro visual pack assets
 - B-roll: bỏ file `.mp4` vào `assets/broll/` (hệ thống sẽ loop clip để phủ hết thời lượng)
 - Nhạc nền: đặt `assets/bgm.mp3` (render sẽ tự ducking khi voice đọc)
+- Brand/style: chỉnh `config/style.json` (watermark, accent label, màu sắc, cỡ chữ, hook templates)
 - Nếu không có b-roll/bgm, pipeline vẫn chạy với fallback visual mặc định.
 
 State bền vững:

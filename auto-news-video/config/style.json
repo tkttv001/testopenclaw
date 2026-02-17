@@ -1,0 +1,16 @@
+{
+  "channel_name": "News Flash VN",
+  "watermark": "@newsflashvn",
+  "headline_color": "white",
+  "accent_label": "TREND NOW",
+  "accent_color_hex": "0xf59e0b",
+  "lower_third_bg_hex": "0x000000",
+  "lower_third_bg_alpha": 0.38,
+  "subtitle_fontsize": 18,
+  "headline_fontsize": 56,
+  "hook_templates": [
+    "Đang nóng trên mạng xã hội hôm nay:",
+    "Tin mọi người đang bàn tán nhiều nhất:",
+    "Bạn cần biết tin này trước khi quá muộn:"
+  ]
+}
