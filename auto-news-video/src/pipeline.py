@@ -147,6 +147,54 @@ def _load_hook_templates() -> List[str]:
     return default_hooks
 
 
+def _slug_words(text: str, limit: int = 5) -> List[str]:
+    words = [w.strip("#.,:;!?()[]{}\"'\n\r\t").lower() for w in text.split()]
+    words = [w for w in words if len(w) >= 3 and w.isascii()]
+    out = []
+    seen = set()
+    for w in words:
+        if w not in seen:
+            seen.add(w)
+            out.append(w)
+        if len(out) >= limit:
+            break
+    return out
+
+
+def generate_packaging(top_news: List[Dict], trends: List[str]) -> Dict:
+    if not top_news:
+        return {
+            "youtube_title": "Bản tin nhanh hôm nay | Cập nhật 60 giây",
+            "tiktok_title": "Tin nóng hôm nay trong 60 giây",
+            "hashtags": ["#tinnong", "#news", "#viral", "#capnhat"],
+        }
+
+    main = top_news[0]
+    core = main["title"][:78]
+    youtube_title = f"{core} | Bản tin nhanh 60s"
+    tiktok_title = f"{core} #tinnong"
+
+    tags = ["tinnong", "news", "viral", "xuhuong", "capnhat"]
+    for t in trends[:5]:
+        tags.extend(_slug_words(t, limit=2))
+    tags.extend(_slug_words(main["title"], limit=4))
+
+    uniq = []
+    seen = set()
+    for t in tags:
+        if t not in seen:
+            seen.add(t)
+            uniq.append("#" + t)
+        if len(uniq) >= 12:
+            break
+
+    return {
+        "youtube_title": youtube_title,
+        "tiktok_title": tiktok_title,
+        "hashtags": uniq,
+    }
+
+
 def build_script(top_news: List[Dict], trends: List[str]) -> str:
     if not top_news:
         return "Hôm nay chưa có tin nổi bật phù hợp niche."
@@ -202,12 +250,27 @@ def run() -> Path:
 
     top = pick_top(fresh, trends=trends, top_k=3)
     script = build_script(top, trends=trends)
+    packaging = generate_packaging(top, trends)
 
     out = OUTPUTS / f"script_{today}.txt"
     out.write_text(script, encoding="utf-8")
 
+    meta_out = OUTPUTS / f"packaging_{today}.json"
+    meta_out.write_text(json.dumps(packaging, ensure_ascii=False, indent=2), encoding="utf-8")
+
     persist_seen(fresh)
-    save_checkpoint("scripted", today, {**artifacts, "script_path": str(out), "top": top, "trend_count": len(trends), "trend_path": str(trend_file)})
+    save_checkpoint(
+        "scripted",
+        today,
+        {
+            **artifacts,
+            "script_path": str(out),
+            "packaging_path": str(meta_out),
+            "top": top,
+            "trend_count": len(trends),
+            "trend_path": str(trend_file),
+        },
+    )
     return out
 
 

@@ -178,6 +178,7 @@ def render_from_script(script_path: Path) -> Path:
     srt_escaped = str(srt_path).replace("\\", "/").replace("'", "\\'")
 
     broll_candidates = sorted([p for p in BROLL_DIR.glob("*.mp4") if p.is_file()]) if BROLL_DIR.exists() else []
+    broll_candidates = broll_candidates[:4]
     use_broll = len(broll_candidates) > 0
     use_bgm = BGM_FILE.exists()
 
@@ -203,17 +204,39 @@ def render_from_script(script_path: Path) -> Path:
     )
 
     if use_broll:
-        broll_path = str(broll_candidates[0])
-        video_filter = (
-            "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,"
-            "crop=1080:1920,"
-            "eq=saturation=1.08:contrast=1.06:brightness=0.01,"
-            "fps=30,"
-            "fade=t=in:st=0:d=0.45,"
-            f"fade=t=out:st={max(0.0, duration - 0.45):.2f}:d=0.45,"
-            f"{visual_overlay}[vout]"
-        )
-        cmd = [ffmpeg, "-y", "-stream_loop", "-1", "-i", broll_path, "-i", str(audio_path)]
+        cmd = [ffmpeg, "-y"]
+        for p in broll_candidates:
+            cmd += ["-stream_loop", "-1", "-i", str(p)]
+        cmd += ["-i", str(audio_path)]
+
+        clip_count = len(broll_candidates)
+        transition = 0.35
+        seg = max(2.4, duration / clip_count)
+
+        chains = []
+        for i in range(clip_count):
+            chains.append(
+                f"[{i}:v]trim=duration={seg + transition:.3f},setpts=PTS-STARTPTS,"
+                "scale=1080:1920:force_original_aspect_ratio=increase,"
+                "crop=1080:1920,eq=saturation=1.08:contrast=1.06:brightness=0.01,fps=30"
+                f"[v{i}]"
+            )
+
+        if clip_count == 1:
+            base_label = "v0"
+        else:
+            chains.append(f"[v0][v1]xfade=transition=fade:duration={transition}:offset={max(0.1, seg - transition):.3f}[x1]")
+            current = "x1"
+            for i in range(2, clip_count):
+                offset = max(0.1, i * (seg - transition))
+                next_label = f"x{i}"
+                chains.append(f"[{current}][v{i}]xfade=transition=fade:duration={transition}:offset={offset:.3f}[{next_label}]")
+                current = next_label
+            base_label = current
+
+        video_filter = ";".join(chains) + f";[{base_label}]{visual_overlay}[vout]"
+        narration_idx = clip_count
+        bgm_idx = clip_count + 1
     else:
         video_filter = (
             f"[0:v]fade=t=in:st=0:d=0.45,fade=t=out:st={max(0.0, duration - 0.45):.2f}:d=0.45,"
@@ -229,16 +252,18 @@ def render_from_script(script_path: Path) -> Path:
             "-i",
             str(audio_path),
         ]
+        narration_idx = 1
+        bgm_idx = 2
 
     if use_bgm:
         cmd += ["-stream_loop", "-1", "-i", str(BGM_FILE)]
         audio_filter = (
-            f"[2:a]atrim=0:{duration:.3f},asetpts=N/SR/TB,volume=0.22[bgm];"
-            "[bgm][1:a]sidechaincompress=threshold=0.03:ratio=12:attack=20:release=300[ducked];"
-            "[1:a][ducked]amix=inputs=2:weights='1 0.7':normalize=0[aout]"
+            f"[{bgm_idx}:a]atrim=0:{duration:.3f},asetpts=N/SR/TB,volume=0.22[bgm];"
+            f"[bgm][{narration_idx}:a]sidechaincompress=threshold=0.03:ratio=12:attack=20:release=300[ducked];"
+            f"[{narration_idx}:a][ducked]amix=inputs=2:weights='1 0.7':normalize=0[aout]"
         )
     else:
-        audio_filter = "[1:a]anull[aout]"
+        audio_filter = f"[{narration_idx}:a]anull[aout]"
 
     filter_complex = video_filter + ";" + audio_filter
 

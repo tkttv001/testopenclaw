@@ -13,6 +13,7 @@ sudo apt install -y ffmpeg
 Kết quả:
 - `outputs/trends_YYYY-MM-DD.json` (trend keywords gần đây)
 - `outputs/script_YYYY-MM-DD.txt`
+- `outputs/packaging_YYYY-MM-DD.json` (gợi ý title YouTube/TikTok + hashtag tự sinh)
 - `outputs/voice_YYYY-MM-DD.mp3`
 - `outputs/sub_YYYY-MM-DD.srt` (pacing theo cụm từ ngắn, đọc dễ hơn)
 - `outputs/video_YYYY-MM-DD.mp4` (pro visual pack: b-roll + icon + transition + ducking, sẽ tự mở preview)
