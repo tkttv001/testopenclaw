@@ -15,7 +15,12 @@ Kết quả:
 - `outputs/script_YYYY-MM-DD.txt`
 - `outputs/voice_YYYY-MM-DD.mp3`
 - `outputs/sub_YYYY-MM-DD.srt` (pacing theo cụm từ ngắn, đọc dễ hơn)
-- `outputs/video_YYYY-MM-DD.mp4` (background động + typography cải tiến, sẽ tự mở preview)
+- `outputs/video_YYYY-MM-DD.mp4` (pro visual pack: b-roll + icon + transition + ducking, sẽ tự mở preview)
+
+## Pro visual pack assets
+- B-roll: bỏ file `.mp4` vào `assets/broll/` (hệ thống sẽ loop clip để phủ hết thời lượng)
+- Nhạc nền: đặt `assets/bgm.mp3` (render sẽ tự ducking khi voice đọc)
+- Nếu không có b-roll/bgm, pipeline vẫn chạy với fallback visual mặc định.
 
 State bền vững:
 - `data/state.db` (seen links)

@@ -9,6 +9,9 @@ from gtts import gTTS
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUTS = ROOT / "outputs"
+ASSETS = ROOT / "assets"
+BROLL_DIR = ASSETS / "broll"
+BGM_FILE = ASSETS / "bgm.mp3"
 
 
 def _clean_lines(script_text: str) -> List[str]:
@@ -147,29 +150,81 @@ def render_from_script(script_path: Path) -> Path:
     headline = _safe_drawtext_text(_extract_headline(script_text)[:90])
     srt_escaped = str(srt_path).replace("\\", "/").replace("'", "\\'")
 
-    # Dynamic background + typography layers
-    vf = (
+    broll_candidates = sorted([p for p in BROLL_DIR.glob("*.mp4") if p.is_file()]) if BROLL_DIR.exists() else []
+    use_broll = len(broll_candidates) > 0
+    use_bgm = BGM_FILE.exists()
+
+    # Pro visual pack: b-roll + icon + transition fade + subtitle style
+    visual_overlay = (
         "drawbox=x='mod(t*120,1080)':y=80:w=360:h=220:color=0x2563eb@0.15:t=fill,"
         "drawbox=x='1080-mod(t*90,1400)':y=1460:w=520:h=320:color=0x7c3aed@0.14:t=fill,"
-        "drawbox=x=0:y=0:w=1080:h=180:color=black@0.32:t=fill,"
+        "drawbox=x=0:y=0:w=1080:h=180:color=black@0.35:t=fill,"
+        "drawbox=x=32:y=200:w=250:h=64:color=0xf59e0b@0.28:t=fill,"
+        "drawtext=text='TREND NOW':fontcolor=white:fontsize=28:x=52:y=218,"
         f"drawtext=text='{headline}':fontcolor=white:fontsize=56:x=(w-text_w)/2:y=50,"
         f"subtitles='{srt_escaped}':force_style='FontName=Arial,FontSize=18,PrimaryColour=&H00FFFFFF,"
         "OutlineColour=&H00000000,BackColour=&H50000000,BorderStyle=3,Outline=1.2,Shadow=0,MarginV=120,Alignment=2'"
     )
 
-    cmd = [
-        ffmpeg,
-        "-y",
-        "-f", "lavfi",
-        "-i", f"color=c=#0b1020:s=1080x1920:d={duration},format=yuv420p",
-        "-i", str(audio_path),
-        "-vf", vf,
-        "-c:v", "libx264",
-        "-preset", "medium",
-        "-crf", "20",
-        "-c:a", "aac",
-        "-b:a", "192k",
-        "-movflags", "+faststart",
+    if use_broll:
+        broll_path = str(broll_candidates[0])
+        video_filter = (
+            "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,"
+            "crop=1080:1920,"
+            "eq=saturation=1.08:contrast=1.06:brightness=0.01,"
+            "fps=30,"
+            "fade=t=in:st=0:d=0.45,"
+            f"fade=t=out:st={max(0.0, duration - 0.45):.2f}:d=0.45,"
+            f"{visual_overlay}[vout]"
+        )
+        cmd = [ffmpeg, "-y", "-stream_loop", "-1", "-i", broll_path, "-i", str(audio_path)]
+    else:
+        video_filter = (
+            f"[0:v]fade=t=in:st=0:d=0.45,fade=t=out:st={max(0.0, duration - 0.45):.2f}:d=0.45,"
+            f"{visual_overlay}[vout]"
+        )
+        cmd = [
+            ffmpeg,
+            "-y",
+            "-f",
+            "lavfi",
+            "-i",
+            f"color=c=#0b1020:s=1080x1920:d={duration},format=yuv420p",
+            "-i",
+            str(audio_path),
+        ]
+
+    if use_bgm:
+        cmd += ["-stream_loop", "-1", "-i", str(BGM_FILE)]
+        audio_filter = (
+            f"[2:a]atrim=0:{duration:.3f},asetpts=N/SR/TB,volume=0.22[bgm];"
+            "[bgm][1:a]sidechaincompress=threshold=0.03:ratio=12:attack=20:release=300[ducked];"
+            "[1:a][ducked]amix=inputs=2:weights='1 0.7':normalize=0[aout]"
+        )
+    else:
+        audio_filter = "[1:a]anull[aout]"
+
+    filter_complex = video_filter + ";" + audio_filter
+
+    cmd += [
+        "-filter_complex",
+        filter_complex,
+        "-map",
+        "[vout]",
+        "-map",
+        "[aout]",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "20",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "192k",
+        "-movflags",
+        "+faststart",
         "-shortest",
         str(video_path),
     ]
