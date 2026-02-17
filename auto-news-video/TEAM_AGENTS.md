@@ -18,7 +18,7 @@ Chạy pipeline tin tức/video tự động mỗi ngày bằng mô hình nhiề
    - Ghi `outputs/video_YYYY-MM-DD.mp4`
 
 4. **agent-publisher**
-   - Upload YouTube/TikTok
+   - Upload YouTube/TikTok (sau khi duyệt preview)
    - Ghi `outputs/publish_YYYY-MM-DD.json`
 
 5. **agent-monitor**
@@ -48,7 +48,7 @@ Agent sau chỉ chạy khi thấy event `done` của bước trước.
 - 06:55 UTC: trigger `agent-collector`
 - 07:00 UTC: trigger `agent-editor`
 - 07:05 UTC: trigger `agent-producer`
-- 07:10 UTC: trigger `agent-publisher` (hoặc chờ duyệt)
+- 07:10 UTC: mở preview video cho bạn xem trước, `agent-publisher` chỉ chạy khi bạn duyệt
 - 07:15 UTC: `agent-monitor` gửi báo cáo
 
 ## Vai trò OpenCode

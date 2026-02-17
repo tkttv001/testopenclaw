@@ -1,6 +1,7 @@
 # Auto News Video MVP
 
 MVP thu thập tin -> tạo script video mỗi ngày, có checkpoint để resume sau restart.
+Mặc định hiện tại: **skip auto upload**, ưu tiên mở video preview để bạn duyệt.
 
 ## Chạy local
 ```bash
