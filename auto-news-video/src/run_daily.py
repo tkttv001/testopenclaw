@@ -4,6 +4,7 @@ import subprocess
 from pathlib import Path
 
 from pipeline import run as run_pipeline
+from render_video import render_from_script
 from event_bus import emit
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,17 +40,14 @@ def main():
 
         emit(run_id, "agent-editor", "done", artifact=str(script_path), detail="MVP uses single merged collector+editor step")
 
-        # placeholders for next phase
-        emit(run_id, "agent-producer", "todo", detail="Implement TTS/subtitle/render")
+        emit(run_id, "agent-producer", "start")
+        video_path = render_from_script(script_path)
+        emit(run_id, "agent-producer", "done", artifact=str(video_path))
 
-        # Skip auto upload for now: only open preview if a rendered video exists
-        video_path = OUT / f"video_{run_id}.mp4"
-        if video_path.exists():
-            opened = open_preview(video_path)
-            emit(run_id, "agent-monitor", "review", artifact=str(video_path), detail=f"preview_opened={opened}")
-            emit(run_id, "agent-publisher", "waiting_approval", detail="Auto upload disabled. Waiting for manual approval.")
-        else:
-            emit(run_id, "agent-publisher", "skipped", detail="Auto upload disabled. No render output yet.")
+        # Skip auto upload for now: always manual review first
+        opened = open_preview(video_path)
+        emit(run_id, "agent-monitor", "review", artifact=str(video_path), detail=f"preview_opened={opened}")
+        emit(run_id, "agent-publisher", "waiting_approval", detail="Auto upload disabled. Waiting for manual approval.")
 
         print(f"OK: {script_path}")
     except Exception as e:
