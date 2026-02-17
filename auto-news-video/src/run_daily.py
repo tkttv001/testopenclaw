@@ -3,8 +3,7 @@ import os
 import subprocess
 from pathlib import Path
 
-from pipeline import run as run_pipeline
-from render_video import render_from_script
+from orchestrator import run_orchestrated
 from event_bus import emit
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,22 +33,14 @@ def main():
     run_id = dt.datetime.utcnow().strftime("%Y-%m-%d")
 
     try:
-        emit(run_id, "agent-collector", "start")
-        script_path = run_pipeline()
-        emit(run_id, "agent-collector", "done", artifact=str(script_path))
-
-        emit(run_id, "agent-editor", "done", artifact=str(script_path), detail="MVP uses single merged collector+editor step")
-
-        emit(run_id, "agent-producer", "start")
-        video_path = render_from_script(script_path)
-        emit(run_id, "agent-producer", "done", artifact=str(video_path))
+        video_path = run_orchestrated()
 
         # Skip auto upload for now: always manual review first
         opened = open_preview(video_path)
         emit(run_id, "agent-monitor", "review", artifact=str(video_path), detail=f"preview_opened={opened}")
         emit(run_id, "agent-publisher", "waiting_approval", detail="Auto upload disabled. Waiting for manual approval.")
 
-        print(f"OK: {script_path}")
+        print(f"OK: {video_path}")
     except Exception as e:
         emit(run_id, "agent-monitor", "error", detail=str(e))
         raise

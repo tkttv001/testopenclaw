@@ -2,6 +2,7 @@ import json
 import random
 import sqlite3
 import datetime as dt
+import subprocess
 from pathlib import Path
 from typing import List, Dict
 
@@ -23,6 +24,7 @@ TREND_SOURCES = [
     "https://trends.google.com/trending/rss?geo=VN",
 ]
 STYLE_FILE = ROOT / "config" / "style.json"
+PLAYWRIGHT_ENRICH_SCRIPT = ROOT / "scripts" / "playwright_trend_enrich.mjs"
 
 
 def init_storage() -> None:
@@ -72,7 +74,19 @@ def collect_news(limit: int = 40) -> List[Dict]:
     return [i for i in items if i["title"] and i["link"]]
 
 
-def collect_trends(limit: int = 20) -> List[str]:
+def _unique_keep_order(items: List[str]) -> List[str]:
+    seen = set()
+    out = []
+    for t in items:
+        k = t.lower().strip()
+        if not k or k in seen:
+            continue
+        seen.add(k)
+        out.append(t.strip())
+    return out
+
+
+def collect_trends_rss(limit: int = 20) -> List[str]:
     terms: List[str] = []
     for url in TREND_SOURCES:
         feed = feedparser.parse(url)
@@ -80,15 +94,36 @@ def collect_trends(limit: int = 20) -> List[str]:
             title = entry.get("title", "").strip()
             if title:
                 terms.append(title)
-    # unique, giữ thứ tự
-    seen = set()
-    uniq = []
-    for t in terms:
-        k = t.lower()
-        if k not in seen:
-            seen.add(k)
-            uniq.append(t)
-    return uniq
+    return _unique_keep_order(terms)
+
+
+def collect_trends_playwright() -> List[str]:
+    if not PLAYWRIGHT_ENRICH_SCRIPT.exists():
+        return []
+    try:
+        subprocess.run(["node", str(PLAYWRIGHT_ENRICH_SCRIPT)], cwd=str(ROOT), check=False, capture_output=True, text=True)
+    except Exception:
+        return []
+
+    today = dt.datetime.utcnow().strftime("%Y-%m-%d")
+    out_file = OUTPUTS / f"playwright_trends_{today}.json"
+    if not out_file.exists():
+        return []
+    try:
+        data = json.loads(out_file.read_text(encoding="utf-8"))
+        trends = data.get("trends", [])
+        if isinstance(trends, list):
+            return _unique_keep_order([str(x) for x in trends])
+    except Exception:
+        return []
+    return []
+
+
+def collect_trends(limit: int = 20) -> List[str]:
+    rss_terms = collect_trends_rss(limit=limit)
+    pw_terms = collect_trends_playwright()
+    merged = _unique_keep_order(pw_terms + rss_terms)
+    return merged[:max(limit, 30)]
 
 
 def dedupe_new(items: List[Dict]) -> List[Dict]:

@@ -26,7 +26,7 @@ Chạy pipeline tin tức/video tự động mỗi ngày bằng mô hình nhiề
    - Cảnh báo lỗi, retry trạng thái fail
 
 ## Giao tiếp giữa các agent
-Không chat tay nhau; dùng **event bus file + state DB**:
+Không chat tay nhau; dùng **event bus file + state DB + task lifecycle**:
 
 - Event log: `data/events.jsonl`
 - Job state: `data/state.db`

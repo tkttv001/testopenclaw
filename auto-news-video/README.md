@@ -28,6 +28,11 @@ State bền vững:
 - `data/state.db` (seen links)
 - `data/checkpoint.json` (resume step)
 - `data/events.jsonl` (event bus giữa agent)
+- `data/tasks.json` (task lifecycle theo agent-team-orchestration: Inbox→Assigned→In Progress→Review→Done)
+
+Trend enrich tự động:
+- RSS trends + Playwright enrich (`scripts/playwright_trend_enrich.mjs`)
+- Output enrich: `outputs/playwright_trends_YYYY-MM-DD.json`
 
 ## Tích hợp OpenClaw
 Dùng cron OpenClaw để gọi script mỗi sáng:
