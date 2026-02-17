@@ -11,10 +11,11 @@ sudo apt install -y ffmpeg
 ```
 
 Kết quả:
+- `outputs/trends_YYYY-MM-DD.json` (trend keywords gần đây)
 - `outputs/script_YYYY-MM-DD.txt`
 - `outputs/voice_YYYY-MM-DD.mp3`
-- `outputs/sub_YYYY-MM-DD.srt`
-- `outputs/video_YYYY-MM-DD.mp4` (sẽ tự mở preview)
+- `outputs/sub_YYYY-MM-DD.srt` (pacing theo cụm từ ngắn, đọc dễ hơn)
+- `outputs/video_YYYY-MM-DD.mp4` (background động + typography cải tiến, sẽ tự mở preview)
 
 State bền vững:
 - `data/state.db` (seen links)

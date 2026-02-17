@@ -1,5 +1,4 @@
 import json
-import os
 import sqlite3
 import datetime as dt
 from pathlib import Path
@@ -17,6 +16,10 @@ RSS_SOURCES = [
     "https://news.google.com/rss?hl=vi&gl=VN&ceid=VN:vi",
     "https://vnexpress.net/rss/tin-moi-nhat.rss",
     "https://tuoitre.vn/rss/tin-moi-nhat.rss",
+]
+
+TREND_SOURCES = [
+    "https://trends.google.com/trending/rss?geo=VN",
 ]
 
 
@@ -67,6 +70,25 @@ def collect_news(limit: int = 40) -> List[Dict]:
     return [i for i in items if i["title"] and i["link"]]
 
 
+def collect_trends(limit: int = 20) -> List[str]:
+    terms: List[str] = []
+    for url in TREND_SOURCES:
+        feed = feedparser.parse(url)
+        for entry in feed.entries[:limit]:
+            title = entry.get("title", "").strip()
+            if title:
+                terms.append(title)
+    # unique, giữ thứ tự
+    seen = set()
+    uniq = []
+    for t in terms:
+        k = t.lower()
+        if k not in seen:
+            seen.add(k)
+            uniq.append(t)
+    return uniq
+
+
 def dedupe_new(items: List[Dict]) -> List[Dict]:
     with sqlite3.connect(DB) as conn:
         cur = conn.cursor()
@@ -78,40 +100,56 @@ def dedupe_new(items: List[Dict]) -> List[Dict]:
         return fresh
 
 
-def score_item(item: Dict, keyword_boost: List[str]) -> int:
+def score_item(item: Dict, keyword_boost: List[str], trends: List[str]) -> int:
     title = item["title"].lower()
     score = 1
+
     for kw in keyword_boost:
         if kw.lower() in title:
             score += 3
+
+    trend_hits = [t for t in trends if t.lower() in title]
+    score += min(8, len(trend_hits) * 4)
+
     clickbait = ["sốc", "không thể tin", "gây bão"]
     if any(x in title for x in clickbait):
         score -= 2
+
+    score += 1 if item.get("published") else 0
+    item["trend_hits"] = trend_hits
+    item["score"] = score
     return score
 
 
-def pick_top(items: List[Dict], top_k: int = 3) -> List[Dict]:
-    keyword_boost = ["ai", "công nghệ", "startup", "kinh tế", "chính sách"]
-    ranked = sorted(items, key=lambda x: score_item(x, keyword_boost), reverse=True)
+def pick_top(items: List[Dict], trends: List[str], top_k: int = 3) -> List[Dict]:
+    keyword_boost = ["ai", "công nghệ", "startup", "kinh tế", "chính sách", "tiktok", "youtube"]
+    ranked = sorted(items, key=lambda x: score_item(x, keyword_boost, trends), reverse=True)
     return ranked[:top_k]
 
 
-def build_script(top_news: List[Dict]) -> str:
+def build_script(top_news: List[Dict], trends: List[str]) -> str:
     if not top_news:
         return "Hôm nay chưa có tin nổi bật phù hợp niche."
 
     main = top_news[0]
+    trend_line = ""
+    if main.get("trend_hits"):
+        trend_line = f"- Trend match: {', '.join(main['trend_hits'][:2])}"
+    elif trends:
+        trend_line = f"- Trend tham khảo hôm nay: {', '.join(trends[:2])}"
+
     lines = [
-        f"Hook: Tin nóng hôm nay: {main['title']}",
+        f"Hook: Tin đang được quan tâm mạnh hôm nay: {main['title']}",
         "",
         "Nội dung chính:",
         f"- Nguồn: {main['source']}",
         f"- Điểm chính: {main['title']}",
-        "- Tác động: Ảnh hưởng trực tiếp đến thị trường/người dùng trong ngắn hạn.",
+        trend_line,
+        "- Góc nhìn nhanh: Điều này có thể tác động trực tiếp đến người dùng trong 24 giờ tới.",
         "",
-        "CTA: Follow kênh để nhận bản tin mỗi ngày trong 60 giây.",
+        "CTA: Nếu bạn muốn mình cập nhật trend nóng mỗi ngày, nhớ follow kênh.",
     ]
-    return "\n".join(lines)
+    return "\n".join([x for x in lines if x.strip()])
 
 
 def persist_seen(items: List[Dict]) -> None:
@@ -129,20 +167,25 @@ def run() -> Path:
     cp = load_checkpoint()
     artifacts = cp.get("artifacts", {}) if cp.get("run_date") == today else {}
 
+    trends = collect_trends()
+    trend_file = OUTPUTS / f"trends_{today}.json"
+    trend_file.write_text(json.dumps(trends, ensure_ascii=False, indent=2), encoding="utf-8")
+    save_checkpoint("trends", today, {**artifacts, "trend_count": len(trends), "trend_path": str(trend_file)})
+
     news = collect_news()
-    save_checkpoint("collected", today, {**artifacts, "collected_count": len(news)})
+    save_checkpoint("collected", today, {**artifacts, "collected_count": len(news), "trend_count": len(trends), "trend_path": str(trend_file)})
 
     fresh = dedupe_new(news)
-    save_checkpoint("deduped", today, {**artifacts, "fresh_count": len(fresh)})
+    save_checkpoint("deduped", today, {**artifacts, "fresh_count": len(fresh), "trend_count": len(trends), "trend_path": str(trend_file)})
 
-    top = pick_top(fresh, top_k=3)
-    script = build_script(top)
+    top = pick_top(fresh, trends=trends, top_k=3)
+    script = build_script(top, trends=trends)
 
     out = OUTPUTS / f"script_{today}.txt"
     out.write_text(script, encoding="utf-8")
 
     persist_seen(fresh)
-    save_checkpoint("scripted", today, {**artifacts, "script_path": str(out), "top": top})
+    save_checkpoint("scripted", today, {**artifacts, "script_path": str(out), "top": top, "trend_count": len(trends), "trend_path": str(trend_file)})
     return out
 
 
