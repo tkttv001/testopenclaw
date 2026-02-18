@@ -17,8 +17,9 @@ Mục tiêu: vận hành team agent có hệ thống, tiết kiệm chi phí, ch
   - Bàn giao cho Builder qua `opencode-controller`.
   - Gate: không có design handoff thì không vào build.
 
-- **Orchestrator (bạn + agent chính)**
+- **NguoitaoWeb (orchestrator chính)**
   - Nhận yêu cầu, chia task, theo dõi trạng thái, tổng hợp báo cáo.
+  - Chỉ khởi chạy workflow khi có trigger tên `nguoitaoweb`.
 - **Builder**
   - Thực thi: code/docs/config/script, tạo artifacts.
 - **Reviewer**

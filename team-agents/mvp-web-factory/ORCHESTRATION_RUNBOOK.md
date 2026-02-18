@@ -2,6 +2,8 @@
 
 ## Cách chạy 1 order end-to-end
 
+Trigger rule: chỉ bắt đầu khi user gọi đúng tên `nguoitaoweb`.
+
 1. Tạo TASK_ID: `WEB-YYYYMMDD-###`
 2. Tạo entry ở `team-agents/shared/tasks/TASK_BOARD.md`
 3. Spawn Advisor -> tạo spec
