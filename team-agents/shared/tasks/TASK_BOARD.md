@@ -1,7 +1,26 @@
 # TASK_BOARD.md
 
 ## Inbox
-- (trống)
+### TASK-20260218-001
+- Title: Personal website MVP for creator profile
+- Priority: P1
+- Owner: Advisor
+- Status: Inbox
+- Model tier: B
+- Scope:
+  - Thu thập brief khách hàng theo template chuẩn
+  - Chốt mục tiêu website + CTA chính + deadline
+  - Tạo spec đầu vào cho Estimator và Builder
+- Acceptance criteria:
+  - Có file spec đầy đủ trong `team-agents/shared/specs/TASK-20260218-001.md`
+  - Có đủ 8 mục intake từ `ORDER_INTAKE_TEMPLATE.md`
+  - Có phần "Out of scope" để tránh tràn phạm vi
+- Artifacts:
+  - `team-agents/shared/specs/TASK-20260218-001.md`
+- Verify:
+  - Kiểm tra spec có đầy đủ section: objective, audience, pages, CTA, timeline, budget, assets, technical requirements
+- Notes/Transitions:
+  - [2026-02-18 06:49 UTC] Created in Inbox by Orchestrator
 
 ## Assigned
 - (trống)
