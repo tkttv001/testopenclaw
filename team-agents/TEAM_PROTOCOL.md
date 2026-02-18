@@ -2,11 +2,13 @@
 
 Mục tiêu: vận hành team agent có hệ thống, tiết kiệm chi phí, chất lượng ổn định.
 
-## Coding execution policy (mandatory)
+## Coding execution policy (mandatory, token-minimized)
 
-- For any task related to coding/editing files, **must use skill `opencode-controller` first**.
-- Follow Plan -> Build loop inside Opencode for implementation tasks.
-- Do not bypass this policy unless user explicitly overrides.
+- All coding agents are **code directors**, not direct coders.
+- For any coding/editing task, agent must delegate implementation to **`opencode-controller`**.
+- Agents only: define scope, send concise commands, review outputs, and decide next step.
+- No manual code writing unless user explicitly overrides.
+- Use shortest possible prompt packets to minimize token usage.
 
 ## Team Roles
 
