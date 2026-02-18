@@ -1,76 +1,29 @@
 # TASK_BOARD.md
 
 ## Inbox
-### TASK-20260218-005
-- Title: Chef scenario v3 with image-first premium improvements
+### TASK-20260218-006
+- Title: Chef scenario reboot (clean slate, old scenarios removed)
 - Priority: P1
 - Owner: nguoitaoweb
 - Status: Done
 - Model tier: A/B
 - Scope:
-  - Rebuild chef website with stronger UX/UI and mandatory imagery
-  - Apply premium visual system + clearer conversion flow
-  - Deploy temporary URL for comparison
+  - Rebuild chef website from scratch after clearing old chef scenarios
+  - Keep premium visual direction + animation-ready structure
+  - Deploy temporary URL for fresh review
 - Acceptance criteria:
-  - Hero + supporting sections include meaningful images
-  - CTA appears in 3 positions
-  - SEO meta/OG present
+  - Old chef scenario files removed from active workflow paths
+  - New spec/artifacts/review/deploy files generated
   - Live URL returns 200
 - Artifacts:
-  - `team-agents/shared/specs/TASK-20260218-005.md`
-  - `team-agents/shared/artifacts/TASK-20260218-005/`
-  - `team-agents/shared/reviews/TASK-20260218-005.md`
+  - `team-agents/shared/specs/TASK-20260218-006.md`
+  - `team-agents/shared/artifacts/TASK-20260218-006/`
+  - `team-agents/shared/reviews/TASK-20260218-006.md`
 - Verify:
-  - URL `/task005/` accessible
+  - URL `/task006/` accessible
 - Notes/Transitions:
-  - [2026-02-18 14:18 UTC] Triggered by user request to compare improvement quality
-  - [2026-02-18 14:19 UTC] Delivered image-first premium version for before/after comparison
-
-### TASK-20260218-004
-- Title: Rebuild premium chef scenario with design-first flow
-- Priority: P1
-- Owner: nguoitaoweb
-- Status: Done
-- Model tier: A/B
-- Scope:
-  - Recreate chef website with stronger premium UX/UI
-  - Include proof-first structure and better conversion placement
-  - Deploy temporary URL
-- Acceptance criteria:
-  - Design-forward hero, service proof, testimonials, CTA repeated
-  - Responsive and readable on mobile
-  - Live URL returns 200
-- Artifacts:
-  - `team-agents/shared/specs/TASK-20260218-004.md`
-  - `team-agents/shared/artifacts/TASK-20260218-004/`
-  - `team-agents/shared/reviews/TASK-20260218-004.md`
-- Verify:
-  - URL `/task004/` accessible
-- Notes/Transitions:
-  - [2026-02-18 13:01 UTC] Triggered by `nguoitaoweb`
-  - [2026-02-18 13:01 UTC] 3Q intake reused from approved chef sample
-  - [2026-02-18 13:02 UTC] Design-first rebuild complete and deployed
-
-### TASK-20260218-003
-- Title: Personal chef website from 3Q intake sample
-- Priority: P1
-- Owner: Orchestrator
-- Status: Done
-- Model tier: A/B
-- Scope:
-  - Execute full 3Q pipeline for personal chef profile
-  - Deploy and return temporary public URL
-- Acceptance criteria:
-  - Spec, quote, build artifact, QA, deploy note available
-  - Live URL returns 200
-- Artifacts:
-  - `team-agents/shared/specs/TASK-20260218-003.md`
-  - `team-agents/shared/artifacts/TASK-20260218-003/`
-  - `team-agents/shared/reviews/TASK-20260218-003.md`
-- Verify:
-  - URL `/task003/` accessible
-- Notes/Transitions:
-  - [2026-02-18 12:42 UTC] Created and executed from approved 3Q sample
+  - [2026-02-18 17:35 UTC] Old chef scenarios archived to `.trash/chef-old/`
+  - [2026-02-18 17:36 UTC] Fresh chef scenario generated and deployed
 
 ### TASK-20260218-002
 - Title: Sample run - 3Q personal website pipeline

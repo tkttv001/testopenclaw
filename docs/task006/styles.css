@@ -1,0 +1,17 @@
+:root{--bg:#0f0c09;--panel:#18130f;--line:#433220;--gold:#d9b45a;--text:#f4efe6;--muted:#cabfae}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#2f2419,transparent 45%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
+.wrap{max-width:1060px;margin:24px auto;padding:0 16px}
+.hero,.booking{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:14px}
+.hero img,.card img{width:100%;height:100%;object-fit:cover;border-radius:12px;border:1px solid #4c3924}
+.badge{display:inline-block;color:var(--gold);font-weight:700;letter-spacing:.12em;font-size:.74rem;opacity:0;transform:translateY(8px);animation:fadeUp .6s .05s forwards}
+h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.12;margin:.4rem 0 1rem;opacity:0;transform:translateY(10px);animation:fadeUp .7s .2s forwards}
+h1 span{color:var(--gold)}.copy p{color:var(--muted);opacity:0;transform:translateY(12px);animation:fadeUp .7s .35s forwards}
+.btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;background:linear-gradient(90deg,#d9b45a,#f3da94);color:#1c150c;transition:transform .24s ease,box-shadow .24s ease;opacity:0;transform:translateY(10px);animation:fadeUp .7s .5s forwards}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(217,180,90,.25)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;transition:transform .25s ease, box-shadow .25s ease}.card:hover{transform:translateY(-4px) scale(1.01);box-shadow:0 10px 26px rgba(0,0,0,.28)}
+.card h3{margin:10px 0 6px}.card p,.booking p{color:var(--muted)}
+.booking{grid-template-columns:1fr;text-align:center}
+.reveal{opacity:0;transform:translateY(12px);animation:sectionIn .8s ease forwards}.reveal:nth-of-type(2){animation-delay:.18s}.reveal:nth-of-type(3){animation-delay:.28s}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}@keyframes sectionIn{to{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}.badge,h1,.copy p,.btn,.reveal{opacity:1;transform:none}}
+@media (max-width:900px){.hero,.grid{grid-template-columns:1fr}.wrap{margin:14px auto}}
