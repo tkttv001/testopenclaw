@@ -5,7 +5,7 @@
 - Title: Personal website MVP for creator profile
 - Priority: P1
 - Owner: Advisor
-- Status: Inbox
+- Status: In Progress
 - Model tier: B
 - Scope:
   - Thu thập brief khách hàng theo template chuẩn
@@ -21,6 +21,7 @@
   - Kiểm tra spec có đầy đủ section: objective, audience, pages, CTA, timeline, budget, assets, technical requirements
 - Notes/Transitions:
   - [2026-02-18 06:49 UTC] Created in Inbox by Orchestrator
+  - [2026-02-18 06:50 UTC] Inbox -> In Progress by Orchestrator (Advisor started intake)
 
 ## Assigned
 - (trống)
