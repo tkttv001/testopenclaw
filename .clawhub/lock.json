@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1771323561511
+    },
+    "agent-team-orchestration": {
+      "version": "1.0.0",
+      "installedAt": 1771323743421
+    },
+    "playwright-mcp": {
+      "version": "1.0.0",
+      "installedAt": 1771324147031
+    }
+  }
+}

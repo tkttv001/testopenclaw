@@ -12,6 +12,7 @@ _Learn about the person you're helping. Update this as you go._
 
 - Preference (2026-02-17): Do the work end-to-end first, then report results.
 - Avoid instructing the user to perform setup/commands unless blocked by hard runtime permissions.
+- Reporting preference (2026-02-17): Avoid granular step-by-step logs in chat; send one consolidated detailed report per request.
 
 ---
 
