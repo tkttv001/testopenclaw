@@ -32,6 +32,22 @@
     "web-perf": {
       "version": "1.0.0",
       "installedAt": 1771434496050
+    },
+    "design-system-creation": {
+      "version": "1.0.0",
+      "installedAt": 1771437960989
+    },
+    "distinctive-design-systems": {
+      "version": "1.0.0",
+      "installedAt": 1771437964523
+    },
+    "tailwind-design-system": {
+      "version": "1.0.0",
+      "installedAt": 1771437972506
+    },
+    "figma": {
+      "version": "2.1.0",
+      "installedAt": 1771437976585
     }
   }
 }

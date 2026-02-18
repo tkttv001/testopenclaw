@@ -14,6 +14,7 @@ Mục tiêu: vận hành team agent có hệ thống, tiết kiệm chi phí, ch
 
 - **Design (mandatory before build for premium output)**
   - Tạo direction UX/UI + image strategy + system tokens + interaction/animation spec.
+  - Ưu tiên dùng skill stack: `design-system-creation`, `distinctive-design-systems`, `tailwind-design-system`, `figma`.
   - Bàn giao cho Builder qua `opencode-controller`.
   - Gate: không có design handoff, visual plan, và animation concept thì không vào build.
 
