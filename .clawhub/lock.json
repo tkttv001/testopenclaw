@@ -16,6 +16,22 @@
     "opencode-controller": {
       "version": "1.0.0",
       "installedAt": 1771417095782
+    },
+    "nextjs-expert": {
+      "version": "1.0.0",
+      "installedAt": 1771433656190
+    },
+    "ui-audit": {
+      "version": "1.0.1",
+      "installedAt": 1771433661545
+    },
+    "openclaw-agent-optimize": {
+      "version": "1.0.9",
+      "installedAt": 1771433663723
+    },
+    "web-perf": {
+      "version": "1.0.0",
+      "installedAt": 1771433677609
     }
   }
 }
