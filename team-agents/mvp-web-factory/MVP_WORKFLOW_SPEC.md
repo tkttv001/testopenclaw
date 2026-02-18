@@ -28,6 +28,12 @@ Pipeline OpenClaw-only cho dịch vụ làm website cá nhân:
 5. DeployOps deploy staging/live.
 6. Orchestrator gửi handover cho khách.
 
+## Hosting policy (Mode A mặc định)
+- `hosting_owner = studio`
+- Deploy bằng account của studio, khách không cần GitHub/Vercel.
+- Nếu chưa có domain: cấp URL tạm (Pages/Vercel subdomain).
+- Luôn bàn giao kèm source code `.zip` + hướng dẫn chuyển giao sau này.
+
 ## SLA MVP
 - Báo giá: <= 30 phút
 - Bản staging đầu: <= 24h

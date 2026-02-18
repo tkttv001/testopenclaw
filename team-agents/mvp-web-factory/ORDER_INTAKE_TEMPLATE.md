@@ -16,6 +16,7 @@
 - Domain hiện có:
 - Kết nối form đến đâu (email/CRM):
 - Cần tích hợp thêm gì:
+- Hosting owner: **studio** | client (MVP mặc định: studio)
 
 ## Kinh doanh
 - Budget:
