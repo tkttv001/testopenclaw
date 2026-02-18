@@ -2,7 +2,7 @@
 
 ## Mục tiêu
 Pipeline OpenClaw-only cho dịch vụ làm website cá nhân:
-`Lead -> 3Q Intake -> Spec/Quote -> Build -> QA -> Deploy -> Handover`
+`Lead -> 3Q Intake -> Spec/Quote -> Design -> Build -> QA -> Deploy -> Handover`
 
 ## Vai trò agents
 1. **Advisor**: intake brief + chốt scope.

@@ -12,6 +12,11 @@ Mục tiêu: vận hành team agent có hệ thống, tiết kiệm chi phí, ch
 
 ## Team Roles
 
+- **Design (new, mandatory before build for premium output)**
+  - Tạo direction UX/UI + system tokens + interaction spec.
+  - Bàn giao cho Builder qua `opencode-controller`.
+  - Gate: không có design handoff thì không vào build.
+
 - **Orchestrator (bạn + agent chính)**
   - Nhận yêu cầu, chia task, theo dõi trạng thái, tổng hợp báo cáo.
 - **Builder**
