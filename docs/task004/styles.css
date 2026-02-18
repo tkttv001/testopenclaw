@@ -1,0 +1,15 @@
+:root{--bg:#0d0b09;--panel:#17120e;--line:#3f2e1a;--gold:#d4af37;--ivory:#f3ede2;--muted:#c9bda8}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% -10%,#2a2016,transparent 40%),var(--bg);color:var(--ivory);font-family:Inter,system-ui,sans-serif;line-height:1.5}
+.noise{position:fixed;inset:0;pointer-events:none;opacity:.06;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:3px 3px}
+.wrap{max-width:980px;margin:24px auto;padding:0 16px;position:relative;z-index:1}
+.panel{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:14px}
+.hero{box-shadow:0 0 0 1px rgba(212,175,55,.2),0 0 30px rgba(212,175,55,.12)}
+.kicker{font-size:.74rem;letter-spacing:.12em;color:var(--gold);font-weight:700}.lead{color:var(--muted);max-width:68ch}
+h1{font-size:clamp(1.7rem,4vw,3rem);line-height:1.15;margin:.4rem 0 1rem}h1 span{color:var(--gold)}h2{margin:.2rem 0 1rem}
+.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;background:linear-gradient(90deg,#d4af37,#f3d781);color:#1b140a}.btn.ghost{background:transparent;color:var(--ivory);border:1px solid var(--line)}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.proof div{border:1px solid var(--line);border-radius:12px;padding:10px;background:#120f0c}.proof strong{display:block;color:var(--gold);font-size:1.2rem}.proof small{color:var(--muted)}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{border:1px solid var(--line);border-radius:12px;padding:14px;background:#120f0c}.cta-card{display:flex;flex-direction:column;justify-content:space-between}
+.menu-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}.menu-list li{border:1px solid var(--line);padding:12px;border-radius:10px;background:#110e0b}.menu-list span{color:var(--gold);font-weight:700;margin-right:8px}
+.testimonials blockquote{margin:0 0 10px;padding:12px;border-left:3px solid var(--gold);background:#120f0c;border-radius:8px;color:var(--muted)}
+.booking p{color:var(--muted)}
+@media (max-width:760px){.wrap{margin:14px auto}.proof{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}

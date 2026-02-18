@@ -1,6 +1,31 @@
 # TASK_BOARD.md
 
 ## Inbox
+### TASK-20260218-004
+- Title: Rebuild premium chef scenario with design-first flow
+- Priority: P1
+- Owner: nguoitaoweb
+- Status: Done
+- Model tier: A/B
+- Scope:
+  - Recreate chef website with stronger premium UX/UI
+  - Include proof-first structure and better conversion placement
+  - Deploy temporary URL
+- Acceptance criteria:
+  - Design-forward hero, service proof, testimonials, CTA repeated
+  - Responsive and readable on mobile
+  - Live URL returns 200
+- Artifacts:
+  - `team-agents/shared/specs/TASK-20260218-004.md`
+  - `team-agents/shared/artifacts/TASK-20260218-004/`
+  - `team-agents/shared/reviews/TASK-20260218-004.md`
+- Verify:
+  - URL `/task004/` accessible
+- Notes/Transitions:
+  - [2026-02-18 13:01 UTC] Triggered by `nguoitaoweb`
+  - [2026-02-18 13:01 UTC] 3Q intake reused from approved chef sample
+  - [2026-02-18 13:02 UTC] Design-first rebuild complete and deployed
+
 ### TASK-20260218-003
 - Title: Personal chef website from 3Q intake sample
 - Priority: P1
