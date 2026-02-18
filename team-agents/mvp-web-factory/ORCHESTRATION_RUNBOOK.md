@@ -6,7 +6,7 @@
 2. Tạo entry ở `team-agents/shared/tasks/TASK_BOARD.md`
 3. Spawn Advisor -> tạo spec
 4. Spawn Estimator -> tạo quote
-5. Khi approved -> Spawn Builder
+5. Khi approved -> Spawn Builder (mandatory: use `opencode-controller` for coding flow)
 6. Spawn QA
 7. Nếu QA PASS -> Spawn DeployOps
 8. Gửi kết quả cho khách + chốt DONE

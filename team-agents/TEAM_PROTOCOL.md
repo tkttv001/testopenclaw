@@ -2,6 +2,12 @@
 
 Mục tiêu: vận hành team agent có hệ thống, tiết kiệm chi phí, chất lượng ổn định.
 
+## Coding execution policy (mandatory)
+
+- For any task related to coding/editing files, **must use skill `opencode-controller` first**.
+- Follow Plan -> Build loop inside Opencode for implementation tasks.
+- Do not bypass this policy unless user explicitly overrides.
+
 ## Team Roles
 
 - **Orchestrator (bạn + agent chính)**
