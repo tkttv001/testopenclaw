@@ -1,0 +1,69 @@
+:root {
+  --bg: #090b12;
+  --card: #111625;
+  --text: #e8f1ff;
+  --muted: #9ab0c9;
+  --accent: #3ee7ff;
+  --accent-2: #8f6bff;
+  --line: #22304b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 10%, #16203d 0%, var(--bg) 45%);
+}
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to right, rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.container { width: min(1020px, 92vw); margin: 0 auto; position: relative; z-index: 1; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+.brand { font-weight: 700; letter-spacing: .08em; color: var(--accent); }
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(6px);
+}
+.glow { box-shadow: 0 0 0 1px rgba(62,231,255,.2), 0 0 28px rgba(62,231,255,.16); }
+.eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .1em; font-size: .75rem; }
+h1 { font-size: clamp(1.6rem, 3vw, 2.5rem); margin: 8px 0 10px; }
+h1 span { color: var(--accent-2); }
+h2 { margin-top: 0; }
+.muted { color: var(--muted); }
+.grid { display: grid; gap: 14px; }
+.grid.two { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.grid.three { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.project { border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: #0d1220; }
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #081018;
+  text-decoration: none;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+.actions { display: flex; gap: 10px; margin-top: 14px; }
+.contact { display: grid; gap: 10px; }
+input, textarea {
+  width: 100%; padding: 10px 12px; border-radius: 10px;
+  border: 1px solid var(--line); background: #0a1120; color: var(--text);
+}
+.footer { padding: 20px 0 34px; text-align: center; }
+
+@media (max-width: 760px) {
+  .grid.two, .grid.three { grid-template-columns: 1fr; }
+  .nav { padding: 14px 0; }
+}

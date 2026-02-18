@@ -5,7 +5,7 @@
 - Title: Personal website MVP for creator profile
 - Priority: P1
 - Owner: DeployOps
-- Status: Failed
+- Status: Review
 - Model tier: B
 - Scope:
   - Thu thập brief khách hàng theo template chuẩn
@@ -34,6 +34,8 @@
   - [2026-02-18 06:58 UTC] QA verdict PASS
   - [2026-02-18 06:58 UTC] Review -> In Progress by Orchestrator (handoff to DeployOps)
   - [2026-02-18 07:00 UTC] Deploy blocked (Vercel CLI unavailable) -> marked Failed pending deploy tooling
+  - [2026-02-18 07:03 UTC] Applied fix: switched to GitHub Pages pipeline (docs/task001 + deploy workflow)
+  - [2026-02-18 07:03 UTC] Failed -> Review by Orchestrator (await first Pages deploy verification)
 
 ## Assigned
 - (trống)
