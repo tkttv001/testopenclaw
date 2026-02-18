@@ -1,6 +1,27 @@
 # TASK_BOARD.md
 
 ## Inbox
+### TASK-20260218-002
+- Title: Sample run - 3Q personal website pipeline
+- Priority: P2
+- Owner: Orchestrator
+- Status: Done
+- Model tier: A/B
+- Scope:
+  - Run full 3Q workflow sample (spec -> quote -> build -> QA -> deploy)
+  - Publish temporary URL
+- Acceptance criteria:
+  - Has spec + quote + artifact + QA + deploy note
+  - Public URL returns 200
+- Artifacts:
+  - `team-agents/shared/specs/TASK-20260218-002.md`
+  - `team-agents/shared/artifacts/TASK-20260218-002/`
+  - `team-agents/shared/reviews/TASK-20260218-002.md`
+- Verify:
+  - URL `/task002/` accessible
+- Notes/Transitions:
+  - [2026-02-18 12:20 UTC] Sample task created and executed end-to-end
+
 ### TASK-20260218-001
 - Title: Personal website MVP for creator profile
 - Priority: P1
