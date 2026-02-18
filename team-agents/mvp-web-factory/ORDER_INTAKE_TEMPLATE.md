@@ -16,7 +16,11 @@ Chỉ cần 3 câu hỏi đầu vào để triển khai web cá nhân:
 
 ## Auto-assumptions (không cần hỏi thêm)
 - Stack: Next.js + Tailwind + TypeScript
-- Trang: Home / About / Projects / Contact
+- Package mặc định báo giá:
+  - Basic: 3 trang = 50k VND
+  - Advanced: 5 trang = 99k VND
+- Basic page set: Home / About / Projects
+- Advanced page set: Home / About / Projects / Blog / Contact
 - SEO chuẩn: metadata, OG, robots, sitemap, schema
 - Mobile-first + hiệu năng + accessibility cơ bản
 - Placeholder có thể thay sau (nếu thiếu logo/content)

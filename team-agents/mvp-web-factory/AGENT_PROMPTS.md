@@ -19,7 +19,9 @@ Lưu file: team-agents/shared/specs/<TASK_ID>.md
 ## 2) Estimator Prompt
 ```text
 Bạn là Estimator. Đọc spec và tạo báo giá gồm:
-- Gói: Basic / Pro / Custom
+- Gói:
+  - Basic (3 trang): 50k VND
+  - Advanced (5 trang): 99k VND
 - Giá
 - Timeline
 - Hạng mục gồm/không gồm

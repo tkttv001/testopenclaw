@@ -4,6 +4,10 @@
 Pipeline OpenClaw-only cho dịch vụ làm website cá nhân:
 `Lead -> 3Q Intake -> Spec/Quote -> Design -> Build -> QA -> Deploy -> Handover`
 
+## Pricing packages (fixed)
+- Basic Package: 3 trang (Home, About, Portfolio/Projects) — **50k VND**
+- Advanced Package: 5 trang (Home, About, Portfolio/Projects, Blog, Contact) — **99k VND**
+
 ## Vai trò agents
 1. **Advisor**: intake brief + chốt scope.
 2. **Estimator**: báo giá + timeline + gói dịch vụ.
