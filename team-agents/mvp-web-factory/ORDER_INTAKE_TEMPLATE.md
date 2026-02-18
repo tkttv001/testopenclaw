@@ -1,24 +1,22 @@
-# ORDER_INTAKE_TEMPLATE.md
+# ORDER_INTAKE_TEMPLATE.md (3-Question Intake)
 
-## Thông tin khách
-- Tên:
-- Email/Telegram:
-- Ngành nghề:
+Chỉ cần 3 câu hỏi đầu vào để triển khai web cá nhân:
 
-## Yêu cầu website
-- Mục tiêu chính:
-- Trang cần có:
-- CTA chính:
-- Nội dung đã có:
-- Brand (màu/font/logo):
+1) Bạn là ai?
+- Vai trò + số năm kinh nghiệm + ngách chính
 
-## Kỹ thuật
-- Domain hiện có:
-- Kết nối form đến đâu (email/CRM):
-- Cần tích hợp thêm gì:
-- Hosting owner: **studio** | client (MVP mặc định: studio)
+2) Khách hàng mục tiêu và mục tiêu website là gì?
+- Recruiter/khách hàng/đối tác
+- CTA chính (Contact/Book call/Get quote)
 
-## Kinh doanh
-- Budget:
-- Deadline:
-- KPI mong muốn (lead/day, conversion):
+3) Bạn muốn style nào?
+- modern / minimal / cyber / premium (+ màu chủ đạo nếu có)
+
+---
+
+## Auto-assumptions (không cần hỏi thêm)
+- Stack: Next.js + Tailwind + TypeScript
+- Trang: Home / About / Projects / Contact
+- SEO chuẩn: metadata, OG, robots, sitemap, schema
+- Mobile-first + hiệu năng + accessibility cơ bản
+- Placeholder có thể thay sau (nếu thiếu logo/content)

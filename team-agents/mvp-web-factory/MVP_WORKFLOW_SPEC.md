@@ -2,7 +2,7 @@
 
 ## Mục tiêu
 Pipeline OpenClaw-only cho dịch vụ làm website cá nhân:
-`Lead -> Brief -> Quote -> Build -> QA -> Deploy -> Handover`
+`Lead -> 3Q Intake -> Spec/Quote -> Build -> QA -> Deploy -> Handover`
 
 ## Vai trò agents
 1. **Advisor**: intake brief + chốt scope.
@@ -21,8 +21,8 @@ Pipeline OpenClaw-only cho dịch vụ làm website cá nhân:
 - `team-agents/shared/decisions/<TASK_ID>.md`
 
 ## Luồng chạy chuẩn
-1. Advisor tạo spec từ brief khách.
-2. Estimator đọc spec, tạo quote.
+1. Advisor chạy 3-question intake và tạo spec ngay.
+2. Estimator tạo quote từ spec (không hỏi thêm trừ blocker critical).
 3. Nếu khách xác nhận: Builder scaffold + implement.
 4. QA chạy checklist + screenshot.
 5. DeployOps deploy staging/live.
