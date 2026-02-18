@@ -13,6 +13,8 @@ Deliver premium-level UX/UI for personal websites with clear differentiation.
 - Minimum: 1 hero image + 2 supporting images (service/project/testimonial context).
 - If real images are missing, provide production-ready placeholders and replacement instructions.
 
+Use `references/animation-direction.md` when defining motion language and interaction behavior for a project.
+
 ## Workflow
 1. Define brand impression in 3 words.
 2. Select visual strategy: minimal-premium | editorial | cyber-luxury | bold-modern.
@@ -36,7 +38,12 @@ Deliver premium-level UX/UI for personal websites with clear differentiation.
    - micro motion (150-350ms)
    - hover/focus states
    - scroll reveal restraint
-7. Handoff implementation plan to Builder via `opencode-controller`.
+7. Define creative animation concept (mandatory):
+   - Hero entrance timeline (2-4 beats)
+   - Section transition logic
+   - Card/button interactive behaviors
+   - Reduced-motion fallback behavior
+8. Handoff implementation plan to Builder via `opencode-controller`.
 
 ## Differentiation checklist
 - Hero is specific, not generic
@@ -50,11 +57,13 @@ Deliver premium-level UX/UI for personal websites with clear differentiation.
 - Accessibility contrast acceptable
 - Clear visual hierarchy in under 5 seconds scan
 - Conversion path obvious without scrolling full page
+- Animation concept is visible and consistent across key sections
+- Reduced-motion mode still preserves usability
 
 ## Output format
 - Creative direction:
 - Image strategy (sources/ratios/placements/alt text):
 - UX layout decisions:
 - UI tokens:
-- Interaction spec:
+- Interaction + animation spec (timeline, hover, transitions, reduced-motion):
 - Builder handoff:
