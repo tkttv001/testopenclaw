@@ -1,6 +1,30 @@
 # TASK_BOARD.md
 
 ## Inbox
+### TASK-20260218-008
+- Title: Chef theme v4 with advanced design-skill stack
+- Priority: P1
+- Owner: nguoitaoweb
+- Status: Done
+- Model tier: A/B
+- Scope:
+  - Rebuild chef theme using newly installed design libraries
+  - Improve UX/UI distinctiveness and motion quality
+  - Deploy and share comparison URL
+- Acceptance criteria:
+  - Basic package scope (3 pages)
+  - Stronger visual system + signature animation
+  - Live URL returns 200
+- Artifacts:
+  - `team-agents/shared/specs/TASK-20260218-008.md`
+  - `team-agents/shared/artifacts/TASK-20260218-008/`
+  - `team-agents/shared/reviews/TASK-20260218-008.md`
+- Verify:
+  - URL `/task008/` accessible
+- Notes/Transitions:
+  - [2026-02-18 18:05 UTC] Triggered by user command "run task008"
+  - [2026-02-18 18:06 UTC] Built and deployed with new design stack
+
 ### TASK-20260218-007
 - Title: Chef theme rebuild with Basic package (3 pages)
 - Priority: P1
