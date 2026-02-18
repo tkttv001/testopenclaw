@@ -1,6 +1,31 @@
 # TASK_BOARD.md
 
 ## Inbox
+### TASK-20260218-005
+- Title: Chef scenario v3 with image-first premium improvements
+- Priority: P1
+- Owner: nguoitaoweb
+- Status: Done
+- Model tier: A/B
+- Scope:
+  - Rebuild chef website with stronger UX/UI and mandatory imagery
+  - Apply premium visual system + clearer conversion flow
+  - Deploy temporary URL for comparison
+- Acceptance criteria:
+  - Hero + supporting sections include meaningful images
+  - CTA appears in 3 positions
+  - SEO meta/OG present
+  - Live URL returns 200
+- Artifacts:
+  - `team-agents/shared/specs/TASK-20260218-005.md`
+  - `team-agents/shared/artifacts/TASK-20260218-005/`
+  - `team-agents/shared/reviews/TASK-20260218-005.md`
+- Verify:
+  - URL `/task005/` accessible
+- Notes/Transitions:
+  - [2026-02-18 14:18 UTC] Triggered by user request to compare improvement quality
+  - [2026-02-18 14:19 UTC] Delivered image-first premium version for before/after comparison
+
 ### TASK-20260218-004
 - Title: Rebuild premium chef scenario with design-first flow
 - Priority: P1
