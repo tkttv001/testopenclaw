@@ -1,0 +1,14 @@
+:root{--bg:#0f0c09;--panel:#19130f;--line:#443321;--gold:#d9b45a;--text:#f4efe6;--muted:#cabfae}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#2e2419,transparent 45%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
+a{color:inherit}.container{max-width:1080px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:0;background:rgba(15,12,9,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0}.brand{font-weight:800;letter-spacing:.04em}.menu a{margin-left:16px;text-decoration:none;color:var(--muted)}.menu a:hover{color:var(--gold)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:center;padding:28px 0}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.badge{color:var(--gold);letter-spacing:.12em;font-size:.74rem;font-weight:700}.hero h1{font-size:clamp(1.8rem,4vw,3rem);margin:.4rem 0 1rem}.hero h1 span{color:var(--gold)}p{color:var(--muted)}
+.btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;background:linear-gradient(90deg,#d9b45a,#f3da94);color:#1c150c;transition:transform .22s ease}.btn:hover{transform:translateY(-2px)}
+img{width:100%;height:100%;object-fit:cover;border-radius:12px;border:1px solid #4c3924}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;transition:transform .25s ease,box-shadow .25s ease}.card:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(0,0,0,.28)}
+footer{margin:24px 0 12px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+.reveal{opacity:0;transform:translateY(10px);animation:up .7s ease forwards}.reveal.d2{animation-delay:.15s}.reveal.d3{animation-delay:.28s}
+@keyframes up{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+@media (max-width:900px){.hero,.grid3{grid-template-columns:1fr}}

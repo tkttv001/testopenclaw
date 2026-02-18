@@ -1,6 +1,30 @@
 # TASK_BOARD.md
 
 ## Inbox
+### TASK-20260218-007
+- Title: Chef theme rebuild with Basic package (3 pages)
+- Priority: P1
+- Owner: nguoitaoweb
+- Status: Done
+- Model tier: A/B
+- Scope:
+  - Build chef site using Basic package only (3 pages)
+  - Keep premium style and lightweight animation
+  - Deploy and provide temporary URL
+- Acceptance criteria:
+  - Exactly 3 pages: Home/About/Projects
+  - SEO baseline on each page
+  - Live URL returns 200
+- Artifacts:
+  - `team-agents/shared/specs/TASK-20260218-007.md`
+  - `team-agents/shared/artifacts/TASK-20260218-007/`
+  - `team-agents/shared/reviews/TASK-20260218-007.md`
+- Verify:
+  - URL `/task007/` accessible
+- Notes/Transitions:
+  - [2026-02-18 17:48 UTC] Created by request using Basic 3-page package
+  - [2026-02-18 17:49 UTC] Built and deployed
+
 ### TASK-20260218-006
 - Title: Chef scenario reboot (clean slate, old scenarios removed)
 - Priority: P1
