@@ -1,6 +1,31 @@
 # TASK_BOARD.md
 
 ## Inbox
+### TASK-20260218-009
+- Title: Chef task rebuilt with explicit design handoff + protocol gates
+- Priority: P1
+- Owner: nguoitaoweb
+- Status: Done
+- Model tier: A/B
+- Scope:
+  - Rebuild chef basic package with mandatory design handoff artifact
+  - Enforce motion + token + image strategy gates
+  - Deploy public URL
+- Acceptance criteria:
+  - Includes design handoff file before build artifacts
+  - 3 pages only (Basic package)
+  - Live URL returns 200
+- Artifacts:
+  - `team-agents/shared/specs/TASK-20260218-009.md`
+  - `team-agents/shared/artifacts/TASK-20260218-009/`
+  - `team-agents/shared/reviews/TASK-20260218-009.md`
+- Verify:
+  - URL `/task009/` accessible
+- Notes/Transitions:
+  - [2026-02-18 18:15 UTC] Triggered by user via nguoitaoweb command intent
+  - [2026-02-18 18:16 UTC] Design handoff created and validated before build
+  - [2026-02-18 18:17 UTC] QA PASS and deploy complete
+
 ### TASK-20260218-008
 - Title: Chef theme v4 with advanced design-skill stack
 - Priority: P1
