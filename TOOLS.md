@@ -31,6 +31,13 @@ Things like:
 - Default speaker: Kitchen HomePod
 ```
 
+## OpenCode (local)
+
+- Installed locally at: `.tools/opencode`
+- Binary: `.tools/opencode/node_modules/.bin/opencode-cloud`
+- Version check:
+  - `cd .tools/opencode && ./node_modules/.bin/opencode-cloud --version`
+
 ## Why Separate?
 
 Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.

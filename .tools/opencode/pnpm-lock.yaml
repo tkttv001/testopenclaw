@@ -1,0 +1,36 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@opencode-cloud/cli-node-linux-x64':
+        specifier: ^25.1.3
+        version: 25.1.3
+      opencode-cloud:
+        specifier: ^25.1.3
+        version: 25.1.3
+
+packages:
+
+  '@opencode-cloud/cli-node-linux-x64@25.1.3':
+    resolution: {integrity: sha512-ZyQGQvC9jHpLS8PXMig0WNpj6m81+4/Lud4WyciB9h91atTvFRBJr/1i9aLTZTzL1Xnm/j/56BLQPfndH9JZqw==}
+    cpu: [x64]
+    os: [linux]
+
+  opencode-cloud@25.1.3:
+    resolution: {integrity: sha512-z51D0eqY6NGW3ULP2PmC9JCPZOrZdpgmb02SrxuK4Gs2hrwRkKzq9Y/ULqJY5qOYRa8W1ulZ41dNAZRWgentCA==}
+    engines: {node: '>=20.0.0'}
+    cpu: [x64, arm64]
+    os: [darwin, linux]
+    hasBin: true
+
+snapshots:
+
+  '@opencode-cloud/cli-node-linux-x64@25.1.3': {}
+
+  opencode-cloud@25.1.3: {}
