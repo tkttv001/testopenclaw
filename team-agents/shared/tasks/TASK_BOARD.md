@@ -4,8 +4,8 @@
 ### TASK-20260218-001
 - Title: Personal website MVP for creator profile
 - Priority: P1
-- Owner: QA
-- Status: Review
+- Owner: DeployOps
+- Status: Failed
 - Model tier: B
 - Scope:
   - Thu thập brief khách hàng theo template chuẩn
@@ -18,6 +18,8 @@
 - Artifacts:
   - `team-agents/shared/specs/TASK-20260218-001.md`
   - `team-agents/shared/artifacts/TASK-20260218-001/quote.md`
+  - `team-agents/shared/artifacts/TASK-20260218-001/`
+  - `team-agents/shared/reviews/TASK-20260218-001.md`
 - Verify:
   - Kiểm tra spec có đầy đủ section: objective, audience, pages, CTA, timeline, budget, assets, technical requirements
 - Notes/Transitions:
@@ -29,6 +31,9 @@
   - [2026-02-18 06:54 UTC] Review -> In Progress by Orchestrator (Builder started implementation)
   - [2026-02-18 06:56 UTC] Builder completed artifact bundle
   - [2026-02-18 06:56 UTC] In Progress -> Review by Orchestrator (handoff to QA)
+  - [2026-02-18 06:58 UTC] QA verdict PASS
+  - [2026-02-18 06:58 UTC] Review -> In Progress by Orchestrator (handoff to DeployOps)
+  - [2026-02-18 07:00 UTC] Deploy blocked (Vercel CLI unavailable) -> marked Failed pending deploy tooling
 
 ## Assigned
 - (trống)
