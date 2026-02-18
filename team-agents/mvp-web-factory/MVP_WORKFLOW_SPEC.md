@@ -39,9 +39,11 @@ Pipeline OpenClaw-only cho dịch vụ làm website cá nhân:
 - Bản staging đầu: <= 24h
 - Bugfix P1: <= 4h
 
-## Rule tiết kiệm token
-- Default model: `openai-codex/gpt-5.1-codex-mini`
-- Task cơ học: `openai-codex/gpt-5.3-codex-spark`
+## Rule tiết kiệm token (OpenCode-first)
+- Default model (build/ops): `opencode/kimi-k2.5` (hoặc `opencode/kimi-k2.5-free`)
+- Task cơ học: `opencode/kimi-k2.5-free`
 - Escalate nặng: `openai-codex/gpt-5.2-codex`
 - Critical: `openai-codex/gpt-5.1-codex-max`
-- Fallback: `nvidia/moonshotai/kimi-k2.5`
+- Fallback khi OpenCode unavailable: `nvidia/moonshotai/kimi-k2.5`
+
+Activation note: cần cấu hình `OPENCODE_API_KEY` để dùng model `opencode/...`.

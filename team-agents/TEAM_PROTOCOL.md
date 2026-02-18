@@ -22,13 +22,15 @@ Quy tắc:
 2. Mỗi transition phải có ghi chú ngắn (ai, làm gì, vì sao).
 3. Không skip bước `Review` trừ khi task cực nhỏ (<=10 phút) và low-risk.
 
-## Routing model (cost-first)
+## Routing model (cost-first, OpenCode-first)
 
-- **Ops / việc cơ học:** `openai-codex/gpt-5.3-codex-spark`
-- **Builder mặc định:** `openai-codex/gpt-5.1-codex-mini`
+- **Ops / việc cơ học:** `opencode/kimi-k2.5-free` (nếu available)
+- **Builder mặc định:** `opencode/kimi-k2.5` hoặc `opencode/kimi-k2.5-free`
 - **Builder task nặng:** `openai-codex/gpt-5.2-codex` hoặc `openai-codex/gpt-5.3-codex`
 - **Reviewer / critical:** `openai-codex/gpt-5.1-codex-max`
-- **Fallback khi OpenAI lỗi:** `nvidia/moonshotai/kimi-k2.5`
+- **Fallback khi OpenCode unavailable:** `nvidia/moonshotai/kimi-k2.5`
+
+> Lưu ý: OpenCode chỉ chạy khi đã cấu hình `OPENCODE_API_KEY`.
 
 ## Handoff format (bắt buộc)
 

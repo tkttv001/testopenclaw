@@ -18,3 +18,7 @@ description: Deploy client projects in studio-managed mode (Mode A) when client 
 5. Send final link.
 
 If primary host fails, switch to fallback static host immediately.
+
+## Cost control
+- Keep deploy messages concise (no long logs unless failure).
+- Prefer static hosting path for MVP to reduce build/deploy iterations.

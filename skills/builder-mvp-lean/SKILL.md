@@ -19,3 +19,8 @@ description: Build portfolio/landing MVP quickly using reusable templates and mi
 - Next action
 
 Prefer simple static-first architecture for speed unless backend is mandatory.
+
+## Model policy
+- Preferred: `opencode/kimi-k2.5` or `opencode/kimi-k2.5-free`
+- If unavailable: fallback to `nvidia/moonshotai/kimi-k2.5`
+- Escalate only when blocked by complex logic.
