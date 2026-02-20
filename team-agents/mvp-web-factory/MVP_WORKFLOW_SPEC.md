@@ -2,7 +2,7 @@
 
 ## Mục tiêu
 Pipeline OpenClaw-only cho dịch vụ làm website cá nhân:
-`Lead -> 3Q Intake -> Spec/Quote -> Stitch UI Design -> Opencode Build -> QA -> Deploy -> Handover`
+`Lead -> 2-Step Intake -> Spec/Quote -> Stitch UI Design -> Opencode Build -> QA -> Deploy -> Handover`
 
 ## Pricing packages (fixed)
 - Basic Package: 3 trang (Home, About, Portfolio/Projects) — **50k VND**
@@ -34,7 +34,7 @@ Trong `team-agents/shared/artifacts/<TASK_ID>/stitch/` bắt buộc có:
 - `handoff.md` (mapping section + notes implement cho Builder)
 
 ## Luồng chạy chuẩn
-1. Advisor chạy 3-question intake và tạo spec ngay.
+1. Advisor chạy 2-step intake (mô tả khách hàng + 3–5 gợi ý style) và tạo spec ngay.
 2. Estimator tạo quote từ spec (không hỏi thêm trừ blocker critical).
 3. Nếu khách xác nhận:
    - Design agent tạo prompt từ spec -> gọi Stitch (`create_project` + `generate_screen_from_text`).

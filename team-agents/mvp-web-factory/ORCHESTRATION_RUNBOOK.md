@@ -6,7 +6,7 @@ Trigger rule: chỉ bắt đầu khi user gọi đúng tên `nguoitaoweb`.
 
 1. Tạo TASK_ID: `WEB-YYYYMMDD-###`
 2. Tạo entry ở `team-agents/shared/tasks/TASK_BOARD.md`
-3. Spawn Advisor -> tạo spec (3Q intake)
+3. Spawn Advisor -> tạo spec (2-step intake: mô tả khách hàng + gợi ý style)
 4. Spawn Estimator -> tạo quote
 5. Khi approved -> Spawn Design (Google Stitch)
 6. Design xuất artifact + handoff cho Builder

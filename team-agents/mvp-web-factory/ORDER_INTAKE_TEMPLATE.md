@@ -1,20 +1,18 @@
-# ORDER_INTAKE_TEMPLATE.md (3-Question Intake)
+# ORDER_INTAKE_TEMPLATE.md (2-Step Intake)
 
-Chỉ cần 3 câu hỏi đầu vào để triển khai web cá nhân:
+Advisor chỉ hỏi đúng 2 lần để triển khai web cá nhân:
 
-1) Bạn là ai?
-- Vai trò + số năm kinh nghiệm + ngách chính
+1) Xin 1 bản giới thiệu mô tả khách hàng
+- Tóm tắt vai trò, kinh nghiệm, dịch vụ/điểm mạnh, mục tiêu website
+- Khuyến khích gửi kèm hình ảnh (avatar/chân dung/ảnh thương hiệu/ảnh sản phẩm) nếu có
 
-2) Khách hàng mục tiêu và mục tiêu website là gì?
-- Recruiter/khách hàng/đối tác
-- CTA chính (Contact/Book call/Get quote)
-
-3) Bạn muốn style nào?
-- modern / minimal / cyber / premium (+ màu chủ đạo nếu có)
+2) Dựa trên mô tả đã nhận, đưa ra 3–5 gợi ý phong cách website phù hợp
+- Advisor chủ động đề xuất 3–5 hướng (vd: modern minimal, premium editorial, bold cyber...)
+- Khách chọn 1 hướng hoặc chọn hybrid từ các gợi ý
 
 ---
 
-## Auto-assumptions (không cần hỏi thêm)
+## Auto-assumptions (không hỏi thêm ngoài 2 bước trên)
 - Stack: Next.js + Tailwind + TypeScript
 - Package mặc định báo giá:
   - Basic: 3 trang = 50k VND
