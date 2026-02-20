@@ -1,0 +1,31 @@
+{
+  "deviceType": "DESKTOP",
+  "generatedBy": "figaro_agent",
+  "height": "2874",
+  "htmlCode": {
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzBiMmY1ZjM0OTM3MDRkNWI5NmYwOGM1NWNiNTcxMzE5EgsSBxDyodrS0QwYAZIBJAoKcHJvamVjdF9pZBIWQhQxODE4NDU0NTc1MTc4OTY3NDU4MA&filename=&opi=96797242",
+    "mimeType": "text/html",
+    "name": "projects/18184545751789674580/files/7b3f170412da4b1a907b8eb397856640"
+  },
+  "id": "8dd001f4d27c49c28095b3572a288647",
+  "name": "projects/18184545751789674580/screens/8dd001f4d27c49c28095b3572a288647",
+  "prompt": "Title: Ronin Portfolio: Contact & Footer\nContext: A premium personal portfolio website for a high-discipline professional, styled in a \"Ronin Premium Dark\" aesthetic to drive inquiries.\nDescription of the screen: Contact and Footer Section. A minimalist contact form titled 'Initiate Inquiry'. Fields include Name, Email, and Project Details, styled with thin gold borders on focus. To the left, a text block says 'Limited availability for Q3. Secure your slot.' to create urgency. Footer contains social links (LinkedIn, X), a small Zen circle logo, and a copyright notice. The overall look is extremely clean, confident, and high-end.\nPlatform: web\nForm factor: desktop",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE"
+  },
+  "screenType": "DESIGN",
+  "screenshot": {
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXQncK03Rdcw7It_P3chogKSW5gZmXO3nj76XXKei-mk9RpxfsTP9sjcQFMg_8af3Hj6SMfEMU-roD1nwbugcUwZ9OJLfCQ8htO4MgryfdEuumKqWUIL27av30ImQwZIuNZEemNLmkE6PDQhy0dd7qH95cR5LUlltbqmzCy1BQ4DkSQ9Uv_Ve_Ef7MX8IdciRioPkxXWrRvIESmAJUUnFE2I3bTPHDBZ7jOFbLA1RAn-wI_IPsgcUvOFeWd",
+    "name": "projects/18184545751789674580/files/2ad73dde8a034a6a980061fd2adaed04"
+  },
+  "theme": {
+    "colorMode": "DARK",
+    "customColor": "#eebd2b",
+    "font": "INTER",
+    "roundness": "ROUND_EIGHT",
+    "saturation": 2
+  },
+  "title": "Ronin Portfolio: Contact & Footer",
+  "width": "2560"
+}

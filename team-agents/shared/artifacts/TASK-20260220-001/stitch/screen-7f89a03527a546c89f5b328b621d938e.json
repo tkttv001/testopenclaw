@@ -1,0 +1,31 @@
+{
+  "deviceType": "DESKTOP",
+  "generatedBy": "figaro_agent",
+  "height": "4502",
+  "htmlCode": {
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM5NTc1ZTEyNGFkYjQyMTBiYjJmOTQ0NjIzMWU3NTk2EgsSBxDyodrS0QwYAZIBJAoKcHJvamVjdF9pZBIWQhQxODE4NDU0NTc1MTc4OTY3NDU4MA&filename=&opi=96797242",
+    "mimeType": "text/html",
+    "name": "projects/18184545751789674580/files/368fda72f51041e1a11b0e05957ce78a"
+  },
+  "id": "7f89a03527a546c89f5b328b621d938e",
+  "name": "projects/18184545751789674580/screens/7f89a03527a546c89f5b328b621d938e",
+  "prompt": "Title: Ronin Portfolio: About & Services\nContext: A premium personal portfolio website for a high-discipline professional, styled in a \"Ronin Premium Dark\" aesthetic to drive inquiries.\nDescription of the screen: About and Services Section. 'About' features a professional bio titled 'The Path of the Modern Ronin' with text focusing on reliability and precision. Side-by-side layout with a minimalist portrait or an abstract ink-style graphic. 'Services' section displays 3 cards: 'Strategic Consulting', 'Product Design', and 'Technical Leadership'. Each card has a subtle gold hover effect, clean typography, and a small icon inspired by Japanese minimalism. The 8px spacing system is strictly applied for a tight, professional feel.\nPlatform: web\nForm factor: desktop",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE"
+  },
+  "screenType": "DESIGN",
+  "screenshot": {
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUlVj1-s8afOGLYO_VDed-zbLikdLD308ngEQLdDlTid8YFiR8bXIaudXVMgW-p4fzWU6kvHohf84_0l49GWXhP0LM36lpHoAD6zUEPokZlYFeasnrCmzzm2mWgw9-TPOFkyQUZoaslzvAtHK2cQV3rRPMFeSX-XQEQySMJ-8W3xBF8xfIz-Pz1A2NDgpeiVAWdqxqNMLLNDM8kGgVKI8IFlX3XUgmNhLCZ-dQ08PX7Kfq6B50HNO_9Kgs",
+    "name": "projects/18184545751789674580/files/e519be372ee448c1b45af2a01535b3c7"
+  },
+  "theme": {
+    "colorMode": "DARK",
+    "customColor": "#eebd2b",
+    "font": "INTER",
+    "roundness": "ROUND_EIGHT",
+    "saturation": 2
+  },
+  "title": "Ronin Portfolio: About & Services",
+  "width": "2560"
+}

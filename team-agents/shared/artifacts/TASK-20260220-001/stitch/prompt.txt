@@ -1,0 +1,40 @@
+Design a premium personal portfolio website in a "Ronin Premium Dark" style.
+
+Goal:
+- Convert visitors into qualified inquiries (book a call / contact form submit).
+
+Target audience:
+- Recruiters, premium clients, and partners seeking high-discipline execution.
+
+Brand style:
+- Vibe: cinematic, disciplined, premium, modern Japanese-inspired
+- Tone: confident, focused, elegant
+- Color direction: deep charcoal/black base, warm paper neutrals, subtle gold accent
+- Typography feel: strong sans-serif headlines + refined readable body text
+
+Layout requirements:
+- DESKTOP first, responsive for mobile
+- One-page structure:
+  1) Hero with strong value proposition + primary CTA
+  2) About with short professional bio + strengths
+  3) Services/Expertise (3-6 cards)
+  4) Featured Projects/Case Studies
+  5) Testimonials/Social proof
+  6) Contact CTA + simple form
+- Sticky top navigation with anchors.
+
+UI constraints:
+- Strong visual hierarchy and high contrast readability
+- 8px spacing system
+- Reusable components (buttons, cards, section headers)
+- Subtle motion only (no flashy effects)
+- Production-ready for React/Next.js implementation
+
+Visual motif guidance:
+- Inspired by sumi-e brush energy and zen circle composition
+- Abstract ink textures as accents, not distracting backgrounds
+- Keep overall look premium and minimal
+
+Content guidance:
+- Use realistic English placeholder copy (no lorem ipsum)
+- Keep copy concise and conversion-oriented

@@ -1,6 +1,29 @@
 # TASK_BOARD.md
 
 ## Inbox
+### TASK-20260220-001
+- Title: Personal website pipeline with Stitch design (Ronin style)
+- Priority: P1
+- Owner: nguoitaoweb
+- Status: In Progress
+- Model tier: A/B
+- Scope:
+  - Run nguoitaoweb intake with selected style option #3 (Ronin Premium Dark)
+  - Generate Stitch UI package and builder handoff artifacts
+  - Prepare for Opencode build handoff
+- Acceptance criteria:
+  - Stitch project + screens generated
+  - Handoff file includes section mapping and implementation constraints
+- Artifacts:
+  - `team-agents/shared/specs/TASK-20260220-001.md`
+  - `team-agents/shared/artifacts/TASK-20260220-001/stitch/`
+- Verify:
+  - `screens.json` contains generated screen IDs and URLs
+- Notes/Transitions:
+  - [2026-02-20 05:xx UTC] Triggered by user via nguoitaoweb
+  - [2026-02-20 05:xx UTC] Style option #3 selected
+  - [2026-02-20 05:xx UTC] Stitch project generated with 4 core screens
+
 ### TASK-20260218-009
 - Title: Chef task rebuilt with explicit design handoff + protocol gates
 - Priority: P1

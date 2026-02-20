@@ -51,7 +51,7 @@ tool_call() {
   while [[ $# -gt 0 ]]; do
     case "$1" in
       --tool) tool_name="${2:-}"; shift 2 ;;
-      --args) args_json="${2:-{}}"; shift 2 ;;
+      --args) args_json="${2:-}"; [[ -z "$args_json" ]] && args_json='{}'; shift 2 ;;
       *) echo "Unknown arg: $1" >&2; exit 2 ;;
     esac
   done

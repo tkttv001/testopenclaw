@@ -1,0 +1,31 @@
+{
+  "deviceType": "DESKTOP",
+  "generatedBy": "figaro_agent",
+  "height": "3758",
+  "htmlCode": {
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzhiOGMzMDdlOGVmMzQ2ZmU4MzgxY2QzZWQxOGUyMzViEgsSBxDyodrS0QwYAZIBJAoKcHJvamVjdF9pZBIWQhQxODE4NDU0NTc1MTc4OTY3NDU4MA&filename=&opi=96797242",
+    "mimeType": "text/html",
+    "name": "projects/18184545751789674580/files/45b882b3db344a09922e5e00aa656a01"
+  },
+  "id": "fa53923a95954d9293eecbc329f23a0e",
+  "name": "projects/18184545751789674580/screens/fa53923a95954d9293eecbc329f23a0e",
+  "prompt": "Title: Ronin Portfolio: Hero & Navigation\nContext: A premium personal portfolio website for a high-discipline professional, styled in a \"Ronin Premium Dark\" aesthetic to drive inquiries.\nDescription of the screen: Hero and Navigation Section of a Ronin-themed portfolio. The layout is desktop-first. Navigation is a sticky top bar with links to 'About', 'Services', 'Work', and a 'Book a Call' CTA button. The Hero section features a striking headline like 'DISCIPLINED EXECUTION. UNCOMPROMISING RESULTS.' in a strong, bold sans-serif. Subtext emphasizes high-stakes project delivery. A primary CTA 'Start Your Project' is a gold-bordered button. The background is a deep charcoal texture reminiscent of Japanese washi paper, with a subtle, abstract sumi-e ink stroke flowing behind the text. Visual motif: Zen circle (Enso) partially visible as a background element.\nPlatform: web\nForm factor: desktop",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE"
+  },
+  "screenType": "DESIGN",
+  "screenshot": {
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUPcu1NB3ypVdZjwbhtshGwaqMqBuWxIJKsilB2W3d4GMejgbaZhB9unszhnJLGvykGIBGHYyiTn3CTk998JD0-lbav_pNJ-kZsrC3GCRvfdpU8FLhrQMBZc5c_YgQSjhCqKvX1dchNDlfRVkcXVVdIiLLoFjHWv2mVIVVmHaJ05IxN1W-JtskSm6dg95Bm4sdEWiduvItaK-efUJkTpzkv0AP7di4EUflJdwa3hHZxjo_K13O8BGmATNH8",
+    "name": "projects/18184545751789674580/files/0dbaf336f350444b9255fafeb8dfec1f"
+  },
+  "theme": {
+    "colorMode": "DARK",
+    "customColor": "#eebd2b",
+    "font": "INTER",
+    "roundness": "ROUND_EIGHT",
+    "saturation": 2
+  },
+  "title": "Ronin Portfolio: Hero & Navigation",
+  "width": "2560"
+}

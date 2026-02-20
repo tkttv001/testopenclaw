@@ -1,0 +1,31 @@
+{
+  "deviceType": "DESKTOP",
+  "generatedBy": "figaro_agent",
+  "height": "4908",
+  "htmlCode": {
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2ViZGY4ZjkwN2ZjMzQ4MGVhZTQzMGNiNjliMzljN2UzEgsSBxDyodrS0QwYAZIBJAoKcHJvamVjdF9pZBIWQhQxODE4NDU0NTc1MTc4OTY3NDU4MA&filename=&opi=96797242",
+    "mimeType": "text/html",
+    "name": "projects/18184545751789674580/files/3a0dc485e8d441fa9cb2c5742ba24365"
+  },
+  "id": "de7c753355f14299b1d0249336ed5459",
+  "name": "projects/18184545751789674580/screens/de7c753355f14299b1d0249336ed5459",
+  "prompt": "Title: Ronin Portfolio: Projects & Proof\nContext: A premium personal portfolio website for a high-discipline professional, styled in a \"Ronin Premium Dark\" aesthetic to drive inquiries.\nDescription of the screen: Featured Projects and Testimonials Section. Case studies are presented in a high-contrast grid. Each project card shows a high-quality preview image, a title like 'Fortune 500 Digital Transformation', and a short results-based description. Below, a 'Testimonials' section features a clean carousel or grid of quotes from high-profile clients, using elegant serif-leaning body text for the quotes. The 'Ronin' vibe is maintained with charcoal backgrounds and gold accent dividers.\nPlatform: web\nForm factor: desktop",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE"
+  },
+  "screenType": "DESIGN",
+  "screenshot": {
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWyxJZ0Twskki9LxvCyJ9r0BE7iHsPbb0m7KQ6RQ1NGX9MscZMy66ZaqCniNsAj-o_p0p2yFew5L0yvc_dsBhmEzlJrCy4PFWdvrrWYjxtx79ODnxAlZIfKps1Z95lrDgCcqacpftjfY40fYdV6Xp_J9H-s2rM7KxcNHaLoyl6M4jxSMuK7248JXyycq8ojkTFzaFgSA2maNgGCycDmAZX6BPO30E3D4LrHX66N6UUMtv__ngauhovgpCA",
+    "name": "projects/18184545751789674580/files/5cd5914bffab42abbbe55d3dd4a61448"
+  },
+  "theme": {
+    "colorMode": "DARK",
+    "customColor": "#eebd2b",
+    "font": "INTER",
+    "roundness": "ROUND_EIGHT",
+    "saturation": 2
+  },
+  "title": "Ronin Portfolio: Projects & Proof",
+  "width": "2560"
+}
