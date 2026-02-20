@@ -6,4 +6,7 @@
 
 ## Status
 - Static files copied to docs/task011.
-- Pending/next: push to `main` and verify live 200 + asset load.
+- Pushed to `main`.
+- Live verification passed:
+  - `https://tkttv001.github.io/testopenclaw/task011/` → HTTP 200
+  - Asset check → HTTP 200 (`/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2`)
