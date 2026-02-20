@@ -2,18 +2,19 @@
 
 ## Mục tiêu
 Pipeline OpenClaw-only cho dịch vụ làm website cá nhân:
-`Lead -> 3Q Intake -> Spec/Quote -> Design -> Build -> QA -> Deploy -> Handover`
+`Lead -> 3Q Intake -> Spec/Quote -> Stitch UI Design -> Opencode Build -> QA -> Deploy -> Handover`
 
 ## Pricing packages (fixed)
 - Basic Package: 3 trang (Home, About, Portfolio/Projects) — **50k VND**
 - Advanced Package: 5 trang (Home, About, Portfolio/Projects, Blog, Contact) — **99k VND**
 
 ## Vai trò agents
-1. **Advisor**: intake brief + chốt scope.
+1. **Advisor**: intake 3Q + chốt scope.
 2. **Estimator**: báo giá + timeline + gói dịch vụ.
-3. **Builder**: code site từ template.
-4. **QA**: test UI/UX + hiệu năng cơ bản.
-5. **DeployOps**: deploy + domain + gửi link.
+3. **Design (Stitch)**: tạo UI bằng Google Stitch từ prompt chuẩn.
+4. **Builder**: dùng `opencode-controller` code theo design Stitch (source of truth).
+5. **QA**: test UI/UX + hiệu năng cơ bản.
+6. **DeployOps**: deploy + domain + gửi link.
 
 ## Trạng thái task
 `INBOX -> ASSIGNED -> IN_PROGRESS -> REVIEW -> DONE | FAILED`
@@ -24,13 +25,24 @@ Pipeline OpenClaw-only cho dịch vụ làm website cá nhân:
 - `team-agents/shared/reviews/<TASK_ID>.md`
 - `team-agents/shared/decisions/<TASK_ID>.md`
 
+## Artifact bổ sung cho Stitch
+Trong `team-agents/shared/artifacts/<TASK_ID>/stitch/` bắt buộc có:
+- `prompt.txt` (prompt đã gửi Stitch)
+- `project.json` (kết quả create/list/get project)
+- `screens.json` (list screens)
+- `screen-*.json` (chi tiết screen)
+- `handoff.md` (mapping section + notes implement cho Builder)
+
 ## Luồng chạy chuẩn
 1. Advisor chạy 3-question intake và tạo spec ngay.
 2. Estimator tạo quote từ spec (không hỏi thêm trừ blocker critical).
-3. Nếu khách xác nhận: Builder scaffold + implement.
-4. QA chạy checklist + screenshot.
-5. DeployOps deploy staging/live.
-6. Orchestrator gửi handover cho khách.
+3. Nếu khách xác nhận:
+   - Design agent tạo prompt từ spec -> gọi Stitch (`create_project` + `generate_screen_from_text`).
+   - Lưu toàn bộ output Stitch vào thư mục artifact.
+4. Builder scaffold + implement bằng Opencode, bám sát design Stitch.
+5. QA chạy checklist + screenshot.
+6. DeployOps deploy staging/live.
+7. Orchestrator gửi handover cho khách.
 
 ## Hosting policy (Mode A mặc định)
 - `hosting_owner = studio`
@@ -40,6 +52,7 @@ Pipeline OpenClaw-only cho dịch vụ làm website cá nhân:
 
 ## SLA MVP
 - Báo giá: <= 30 phút
+- Stitch design v1: <= 60 phút sau khi quote được duyệt
 - Bản staging đầu: <= 24h
 - Bugfix P1: <= 4h
 
@@ -51,3 +64,9 @@ Pipeline OpenClaw-only cho dịch vụ làm website cá nhân:
 - Fallback khi OpenCode unavailable: `nvidia/moonshotai/kimi-k2.5`
 
 Activation note: cần cấu hình `OPENCODE_API_KEY` để dùng model `opencode/...`.
+
+## Stitch integration requirements
+- Dùng MCP endpoint: `https://stitch.googleapis.com/mcp`
+- Env bắt buộc: `GOOGLE_STITCH_API_KEY`
+- Luôn gọi `tools-list` trước để lấy tên tool hiện hành.
+- Nếu lỗi rate-limit hoặc timeout: không spam retry; chờ backoff rồi `get_screen`/`list_screens` để kiểm tra trạng thái trước khi gọi lại.
