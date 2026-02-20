@@ -1,0 +1,25 @@
+Create the mobile direction for a premium fine-dining chef website (same brand as desktop).
+
+Mobile goals:
+- Fast scanning, high visual impact, elegant readability
+- Sticky compact header + accessible menu drawer
+- Thumb-friendly CTA and form controls
+
+Design requirements:
+- Use a 390px mobile baseline (responsive up to tablet)
+- Keep 5-page structure: Home / About / Signature / Stories / Contact
+- Preserve premium style with simplified hierarchy
+
+Per-page mobile expectations:
+1) Home: stacked hero, immediate CTA, signature cards in carousel/stack
+2) About: timeline blocks, portrait + concise story sections
+3) Signature: tasting cards with key details, clear service labels
+4) Stories: list/card feed with image + short excerpt
+5) Contact: compact premium form with clear field grouping
+
+Style + UX constraints:
+- Maintain dark-luxury palette and editorial typography balance
+- Ensure readable line lengths and spacing rhythm
+- Reusable UI primitives for implementation
+- Subtle transitions; avoid heavy animation
+- Production-ready output for Next.js + Tailwind

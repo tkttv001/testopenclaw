@@ -1,6 +1,35 @@
 # TASK_BOARD.md
 
 ## Inbox
+### TASK-20260220-002
+- Title: Chef premium fine-dining pipeline (5-page + deploy)
+- Priority: P1
+- Owner: nguoitaoweb
+- Status: Done
+- Model tier: A/B
+- Scope:
+  - Intake locked: chef profile (6 years, USA+Vietnam) and style #2 Premium Fine Dining
+  - Complete full pipeline: spec, quote, design package, build, QA, deploy
+- Acceptance criteria:
+  - 5 true pages (Home/About/Signature/Stories/Contact)
+  - Mobile-first premium implementation with SEO baseline
+  - Public preview URL live
+- Artifacts:
+  - `team-agents/shared/specs/TASK-20260220-002.md`
+  - `team-agents/shared/artifacts/TASK-20260220-002/quote.md`
+  - `team-agents/shared/artifacts/TASK-20260220-002/stitch/`
+  - `team-agents/shared/artifacts/TASK-20260220-002/site/`
+  - `team-agents/shared/reviews/TASK-20260220-002.md`
+- Verify:
+  - URL `/task012/` accessible
+- Notes/Transitions:
+  - [2026-02-20 07:50 UTC] Triggered by user via nguoitaoweb
+  - [2026-02-20 07:xx UTC] Spec + quote finalized from locked intake
+  - [2026-02-20 07:xx UTC] Stitch prompts prepared (desktop + mobile) with fallback package due missing API key
+  - [2026-02-20 07:xx UTC] Built Next.js App Router + Tailwind + TS 5-page premium site
+  - [2026-02-20 07:xx UTC] QA PASS (lint/build/routes/SEO/responsive checks)
+  - [2026-02-20 07:xx UTC] Deployed static export to `docs/task012/` and pushed to `main`
+
 ### TASK-20260220-001
 - Title: Personal website pipeline with Stitch design (Ronin style)
 - Priority: P1

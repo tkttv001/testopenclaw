@@ -1,0 +1,34 @@
+{
+  "taskId": "TASK-20260220-002",
+  "style": "Premium Fine Dining",
+  "pages": [
+    {
+      "name": "Home",
+      "sections": ["Hero", "Signature Highlights", "Testimonials", "Booking CTA"]
+    },
+    {
+      "name": "About",
+      "sections": ["Chef Portrait", "USA-Vietnam Timeline", "Philosophy", "Press & Awards"]
+    },
+    {
+      "name": "Signature",
+      "sections": ["Tasting Concepts Grid", "Pairing Notes", "Service Formats"]
+    },
+    {
+      "name": "Stories",
+      "sections": ["Editorial Feed", "Featured Story", "Ingredient Notes"]
+    },
+    {
+      "name": "Contact",
+      "sections": ["Booking Intro", "Inquiry Form", "Service Regions", "Contact Details"]
+    }
+  ],
+  "components": [
+    "Sticky header",
+    "Primary/secondary CTA buttons",
+    "Card variants",
+    "Section heading module",
+    "Testimonial quote block",
+    "Footer with social/contact"
+  ]
+}

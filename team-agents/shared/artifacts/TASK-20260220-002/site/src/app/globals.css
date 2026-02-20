@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #111111;
+  --bg-soft: #171717;
+  --surface: #1e1e1e;
+  --text: #f8f5ef;
+  --muted: #cfc8bb;
+  --gold: #c6a15b;
+  --wine: #5a2e2e;
+  --border: #2b2b2b;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --font-sans: var(--font-inter);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at 80% -10%, #2a1f12 0%, var(--bg) 42%), var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3 { font-family: var(--font-display), ui-serif, Georgia, serif; }
+
+.focus-ring:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.page-shell { min-height: 100vh; }
+.container { margin-inline: auto; max-width: 72rem; padding-inline: 1rem; }
+@media (min-width: 640px) { .container { padding-inline: 1.5rem; } }
+@media (min-width: 1024px) { .container { padding-inline: 2rem; } }
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #000000ba 0%, transparent 55%);
+}
+
+.gold-chip {
+  display: inline-block;
+  border: 1px solid color-mix(in srgb, var(--gold) 62%, transparent);
+  color: var(--gold);
+  border-radius: 999px;
+  padding: 0.28rem 0.72rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

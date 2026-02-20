@@ -1,0 +1,38 @@
+Design a premium fine-dining personal website for a chef with 6 years of experience (3 years in the USA, 3 years in Vietnam).
+
+Creative direction:
+- Visual tone: cinematic, elegant, upscale, quietly luxurious
+- Brand feel: Michelin-inspired plating precision + warm cultural storytelling
+- Color palette: charcoal black (#111111), ivory (#F8F5EF), muted gold (#C6A15B), deep wine accent (#5A2E2E)
+- Typography: editorial serif for headlines, refined sans-serif for body
+
+Desktop-first layout requirements:
+- Sticky top nav with links: Home / About / Signature / Stories / Contact
+- Strong hero with signature dish image, chef positioning statement, CTA buttons
+- Section rhythm with generous whitespace and modular cards
+- 12-column desktop grid, premium spacing scale
+
+Generate 5 pages:
+1) Home
+   - Hero + core value proposition
+   - Signature highlights (3 cards)
+   - Testimonials / accolades strip
+   - CTA block
+2) About
+   - Chef journey (USA x Vietnam timeline)
+   - Culinary philosophy
+   - Awards / press logos row
+3) Signature (Menu/Projects equivalent)
+   - 6 signature tasting concepts
+   - Pairing notes and service format tags
+4) Stories (Blog equivalent)
+   - Editorial card grid for chef notes and ingredient stories
+5) Contact
+   - Premium booking form, inquiry categories, service regions
+
+UI constraints:
+- WCAG-friendly contrast
+- Reusable components (button variants, cards, section headers)
+- Subtle motion only (fade/slide micro-interactions)
+- Production-ready for React/Next implementation
+- Avoid lorem ipsum; use realistic culinary copy in English
