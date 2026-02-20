@@ -1,0 +1,14 @@
+{
+  "desktop": [
+    {"id": "home-desktop", "route": "/", "title": "Home", "intent": "Hero + cross-page teasers"},
+    {"id": "about-desktop", "route": "/about", "title": "About", "intent": "Story + principles"},
+    {"id": "projects-desktop", "route": "/projects", "title": "Projects", "intent": "Results-first case studies"},
+    {"id": "blog-desktop", "route": "/blog", "title": "Blog", "intent": "Content-heavy article index"},
+    {"id": "contact-desktop", "route": "/contact", "title": "Contact", "intent": "Inquiry conversion"}
+  ],
+  "mobileVariants": [
+    {"id": "home-mobile-nav-hero", "route": "/", "viewport": 390, "focus": "menu + hero stack"},
+    {"id": "blog-mobile-content", "route": "/blog", "viewport": 390, "focus": "content-heavy readability"},
+    {"id": "contact-mobile-flow", "route": "/contact", "viewport": 390, "focus": "form completion"}
+  ]
+}

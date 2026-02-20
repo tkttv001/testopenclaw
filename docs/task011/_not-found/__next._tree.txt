@@ -1,0 +1,2 @@
+:HL["/testopenclaw/task011/_next/static/chunks/0c20a20c12560f4c.css","style"]
+0:{"buildId":"UnC1dXGCpTTwLW_JRtZhC","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

@@ -1,0 +1,17 @@
+{
+  "projectName": "Ronin-TASK-20260220-001-v2",
+  "objective": "Expand one-page concept into true 5-route web IA with explicit mobile coverage",
+  "styleSystem": "Ronin Premium Dark",
+  "status": "design-spec-complete",
+  "stitchExecution": {
+    "attempted": true,
+    "result": "blocked_missing_env",
+    "details": "GOOGLE_STITCH_API_KEY was not available in runtime; prompts and screen specs prepared for immediate Stitch execution once key is provided."
+  },
+  "routes": ["/", "/about", "/projects", "/blog", "/contact"],
+  "viewports": {
+    "mobile": 390,
+    "tablet": 768,
+    "desktop": 1280
+  }
+}

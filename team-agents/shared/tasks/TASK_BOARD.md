@@ -29,6 +29,10 @@
   - [2026-02-20 07:00 UTC] Deploy prepared to `docs/task010/` with Next static export + basePath fix
   - [2026-02-20 07:00 UTC] Waiting for push + Pages publish verification (HTTP 200) before final Done confirmation
   - [2026-02-20 07:02 UTC] Pushed `main`; public URL verified live (HTTP 200): `https://tkttv001.github.io/testopenclaw/task010/`
+  - [2026-02-20 07:34 UTC] Reopened for v2 gap fix: one-page output replaced with 5-route requirement and mobile design coverage mandate
+  - [2026-02-20 07:xx UTC] Added `stitch-v2/` with desktop+mobile prompt pack, screen matrix, responsive rules, and handoff
+  - [2026-02-20 07:xx UTC] Rebuilt implementation under `site-v2/` as Next.js App Router 5-page structure (Home/About/Projects/Blog/Contact)
+  - [2026-02-20 07:xx UTC] Deployed static export to `docs/task011/` and prepared QA v2 + deploy note
 
 ### TASK-20260218-009
 - Title: Chef task rebuilt with explicit design handoff + protocol gates
