@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://tkttv001.github.io/testopenclaw/task010/sitemap.xml

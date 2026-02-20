@@ -7,7 +7,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://example.com";
+const siteUrl = "https://tkttv001.github.io/testopenclaw/task010/";
 const siteTitle = "Ronin Portfolio — Disciplined Execution";
 const siteDescription =
   "Premium one-page personal portfolio in a Ronin-inspired dark aesthetic for consulting, product design, and technical leadership.";

@@ -25,6 +25,9 @@
   - [2026-02-20 05:xx UTC] Stitch project generated with 4 core screens
   - [2026-02-20 06:36 UTC] Builder implemented Next.js + Tailwind + TS site bundle under `artifacts/TASK-20260220-001/site/`
   - [2026-02-20 06:37 UTC] Build/lint passed; task moved to Done
+  - [2026-02-20 06:59 UTC] QA PASS (responsive/nav/CTA/form/SEO/build checks)
+  - [2026-02-20 07:00 UTC] Deploy prepared to `docs/task010/` with Next static export + basePath fix
+  - [2026-02-20 07:00 UTC] Waiting for push + Pages publish verification (HTTP 200) before final Done confirmation
 
 ### TASK-20260218-009
 - Title: Chef task rebuilt with explicit design handoff + protocol gates
