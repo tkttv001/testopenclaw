@@ -14,7 +14,8 @@ Mục tiêu: vận hành team agent có hệ thống, tiết kiệm chi phí, ch
 
 - **Design (mandatory before build for premium output)**
   - Tạo direction UX/UI + image strategy + system tokens + interaction/animation spec.
-  - Ưu tiên dùng skill stack: `design-system-creation`, `distinctive-design-systems`, `tailwind-design-system`, `figma`.
+  - Với web cá nhân: ưu tiên **Google Stitch (MCP)** để generate UI trước khi build.
+  - Skill stack ưu tiên: `google-stitch` (+ `design-system-creation`, `distinctive-design-systems`, `tailwind-design-system`, `figma` khi cần).
   - Bàn giao cho Builder qua `opencode-controller`.
   - Gate: không có design handoff, visual plan, và animation concept thì không vào build.
 
@@ -23,6 +24,7 @@ Mục tiêu: vận hành team agent có hệ thống, tiết kiệm chi phí, ch
   - Chỉ khởi chạy workflow khi có trigger tên `nguoitaoweb`.
 - **Builder**
   - Thực thi: code/docs/config/script, tạo artifacts.
+  - Với flow Stitch: dùng output Stitch (screens + handoff) làm source of truth khi chỉ đạo `opencode-controller`.
 - **Reviewer**
   - Soát chất lượng, test checklist, phản biện rủi ro.
 - **Ops**
