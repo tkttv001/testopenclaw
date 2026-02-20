@@ -6,7 +6,9 @@
 
 ## Status
 - Static export copied to docs/task012.
-- Ready and pushed on `main`.
+- Pushed on `main`.
+- Live verification passed:
+  - `https://tkttv001.github.io/testopenclaw/task012/` → HTTP 200
 
 ## Verify steps
 - Open: `https://tkttv001.github.io/testopenclaw/task012/`

@@ -29,6 +29,7 @@
   - [2026-02-20 07:xx UTC] Built Next.js App Router + Tailwind + TS 5-page premium site
   - [2026-02-20 07:xx UTC] QA PASS (lint/build/routes/SEO/responsive checks)
   - [2026-02-20 07:xx UTC] Deployed static export to `docs/task012/` and pushed to `main`
+  - [2026-02-20 07:56 UTC] Public URL verified live (HTTP 200): `https://tkttv001.github.io/testopenclaw/task012/`
 
 ### TASK-20260220-001
 - Title: Personal website pipeline with Stitch design (Ronin style)
