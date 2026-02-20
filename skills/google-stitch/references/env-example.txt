@@ -1,2 +1,2 @@
 GOOGLE_STITCH_API_KEY=replace_me
-GOOGLE_STITCH_ENDPOINT=https://replace-with-official-endpoint
+GOOGLE_STITCH_MCP_ENDPOINT=https://stitch.googleapis.com/mcp

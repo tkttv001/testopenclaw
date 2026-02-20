@@ -1,52 +1,47 @@
 ---
 name: google-stitch
-description: Generate UI concepts/code via a Stitch-compatible API endpoint. Use when user asks to design UI from prompts/images using Google Stitch, Google Labs Stitch, or Stitch API and wants structured request/response handling.
+description: Use Google Stitch via its MCP endpoint to generate UI concepts/code from prompts. Use when user asks to design UI with Google Stitch / stitch.withgoogle.com and wants reproducible MCP calls (initialize, tools/list, tools/call).
 ---
 
-# Google Stitch
+# Google Stitch (MCP)
 
-Use this skill to call a Stitch-compatible API safely and reproducibly.
+Use Stitch through MCP endpoint (not legacy REST guesswork).
 
-## Inputs
+## Endpoint + Auth
 
-- `prompt` (required): UI brief
-- `mode` (optional): `experimental` | `standard` (default: `experimental`)
-- `device` (optional): `web` | `mobile` (default: `web`)
-- `endpoint` (optional): default from env `GOOGLE_STITCH_ENDPOINT`
+- MCP endpoint: `https://stitch.googleapis.com/mcp`
+- API key header: `X-Goog-Api-Key: <key>`
+- Optional OAuth flow: `Authorization: Bearer <token>` and `X-Goog-User-Project: <project-id>`
 
 ## Required Environment
 
 - `GOOGLE_STITCH_API_KEY`
-- `GOOGLE_STITCH_ENDPOINT` (example placeholder: `https://api.stitch.google.com/v1/generate`)
+- Optional `GOOGLE_STITCH_MCP_ENDPOINT` (default is the official endpoint above)
 
-Do **not** hardcode API keys in skill files.
+Do **not** hardcode keys in files.
 
-## Execution
+## Commands
 
-Run:
+Initialize + list Stitch tools:
 
 ```bash
-skills/google-stitch/scripts/stitch_generate.sh \
-  --prompt "<your prompt>" \
-  --mode experimental \
-  --device web
+skills/google-stitch/scripts/stitch_mcp.sh tools-list
 ```
 
-Optional override:
+Call a Stitch MCP tool:
 
 ```bash
-skills/google-stitch/scripts/stitch_generate.sh \
-  --endpoint "https://<actual-endpoint>" \
-  --prompt "Landing page for AI course"
+skills/google-stitch/scripts/stitch_mcp.sh tool-call \
+  --tool "<tool_name_from_tools_list>" \
+  --args '{"prompt":"Design a SaaS dashboard homepage"}'
 ```
 
 ## Output Contract
 
-The script writes raw API JSON to stdout.
-
-If endpoint resolution fails, script exits non-zero with a clear diagnostic.
+- Script prints raw JSON-RPC responses to stdout.
+- Non-zero exit for missing auth/env, invalid JSON args, or HTTP failures.
 
 ## Notes
 
-- Google Labs products often change hostnames and auth flows. Verify endpoint from official docs before production use.
-- Keep response handling defensive (fields may differ across versions).
+- Always discover actual tool names first via `tools-list` (tool names may change).
+- If the API key was exposed, rotate/revoke it immediately.
