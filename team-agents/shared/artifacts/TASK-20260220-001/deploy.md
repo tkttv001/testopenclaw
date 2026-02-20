@@ -20,4 +20,4 @@ Public URL: `https://tkttv001.github.io/testopenclaw/task010/`
 
 ## Verification
 - Pre-push URL check returned 404 (expected before publish).
-- Post-push URL verification must return HTTP 200 to mark Done.
+- Post-push URL verification succeeded: HTTP 200 at `https://tkttv001.github.io/testopenclaw/task010/`.
