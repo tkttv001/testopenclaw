@@ -4,6 +4,13 @@ set -euo pipefail
 ENDPOINT="${GOOGLE_STITCH_MCP_ENDPOINT:-https://stitch.googleapis.com/mcp}"
 API_KEY="${GOOGLE_STITCH_API_KEY:-}"
 
+# Fallback for non-interactive sessions: load key from user shell profile if available.
+if [[ -z "$API_KEY" && -f "$HOME/.bashrc" ]]; then
+  # shellcheck disable=SC1090
+  source "$HOME/.bashrc" || true
+  API_KEY="${GOOGLE_STITCH_API_KEY:-}"
+fi
+
 cmd="${1:-}"
 shift || true
 
