@@ -5,7 +5,7 @@
 - Title: Personal website pipeline with Stitch design (Ronin style)
 - Priority: P1
 - Owner: nguoitaoweb
-- Status: In Progress
+- Status: Done
 - Model tier: A/B
 - Scope:
   - Run nguoitaoweb intake with selected style option #3 (Ronin Premium Dark)
@@ -23,6 +23,8 @@
   - [2026-02-20 05:xx UTC] Triggered by user via nguoitaoweb
   - [2026-02-20 05:xx UTC] Style option #3 selected
   - [2026-02-20 05:xx UTC] Stitch project generated with 4 core screens
+  - [2026-02-20 06:36 UTC] Builder implemented Next.js + Tailwind + TS site bundle under `artifacts/TASK-20260220-001/site/`
+  - [2026-02-20 06:37 UTC] Build/lint passed; task moved to Done
 
 ### TASK-20260218-009
 - Title: Chef task rebuilt with explicit design handoff + protocol gates
