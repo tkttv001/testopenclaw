@@ -65,8 +65,10 @@ Trong `team-agents/shared/artifacts/<TASK_ID>/stitch/` bắt buộc có:
 
 Activation note: cần cấu hình `OPENCODE_API_KEY` để dùng model `opencode/...`.
 
-## Stitch integration requirements
+## Stitch integration requirements (strict)
 - Dùng MCP endpoint: `https://stitch.googleapis.com/mcp`
 - Env bắt buộc: `GOOGLE_STITCH_API_KEY`
 - Luôn gọi `tools-list` trước để lấy tên tool hiện hành.
 - Nếu lỗi rate-limit hoặc timeout: không spam retry; chờ backoff rồi `get_screen`/`list_screens` để kiểm tra trạng thái trước khi gọi lại.
+- **Hard gate:** nếu thiếu `GOOGLE_STITCH_API_KEY` hoặc Stitch call fail, task phải chuyển `BLOCKED` và báo lỗi để xử lý key. **Không được dùng fallback design để thay Stitch**.
+- **Build phải bám 100% Stitch handoff** (`stitch/handoff.md` + `screens.json`) làm source of truth.

@@ -8,9 +8,10 @@ Trigger rule: chỉ bắt đầu khi user gọi đúng tên `nguoitaoweb`.
 2. Tạo entry ở `team-agents/shared/tasks/TASK_BOARD.md`
 3. Spawn Advisor -> tạo spec (2-step intake: mô tả khách hàng + gợi ý style)
 4. Spawn Estimator -> tạo quote
-5. Khi approved -> Spawn Design (Google Stitch)
-6. Design xuất artifact + handoff cho Builder
-7. Spawn Builder (Builder only instructs `opencode-controller`, no direct coding)
+5. Khi approved -> Preflight check `GOOGLE_STITCH_API_KEY`
+6. Spawn Design (Google Stitch)
+7. Design xuất artifact + handoff cho Builder
+8. Spawn Builder (Builder only instructs `opencode-controller`, no direct coding)
 8. Spawn QA (QA can request patch via `opencode-controller`)
 9. Nếu QA PASS -> Spawn DeployOps
 10. Gửi kết quả cho khách + chốt DONE
@@ -40,3 +41,4 @@ Design agent phải trả thêm:
 - `generate_screen_from_text` có thể chạy lâu: không retry ngay.
 - Nếu timeout/network fail: kiểm tra lại bằng `list_screens`/`get_screen` trước khi gọi lại.
 - Dùng exponential backoff khi gặp `API rate limit reached`.
+- Nếu thiếu key / auth fail: dừng pipeline và mark BLOCKED, không được tiếp tục build bằng fallback UI.

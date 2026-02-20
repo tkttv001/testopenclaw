@@ -50,6 +50,11 @@ Quy trình:
 4) Lấy dữ liệu screen (list_screens/get_screen)
 5) Viết handoff.md để Builder implement nhất quán
 
+Rule bắt buộc:
+- Nếu thiếu `GOOGLE_STITCH_API_KEY` hoặc Stitch auth fail => trả trạng thái BLOCKED.
+- Không được tạo fallback UI package để thay Stitch.
+- Build chỉ được bắt đầu khi có artifact Stitch thật.
+
 Yêu cầu handoff.md:
 - Mapping UI sections -> component names
 - Spacing/typography/color notes
