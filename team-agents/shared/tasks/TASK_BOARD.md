@@ -18,18 +18,20 @@
   - `team-agents/shared/specs/TASK-20260220-002.md`
   - `team-agents/shared/artifacts/TASK-20260220-002/quote.md`
   - `team-agents/shared/artifacts/TASK-20260220-002/stitch/`
+  - `team-agents/shared/artifacts/TASK-20260220-002/stitch-real/`
   - `team-agents/shared/artifacts/TASK-20260220-002/site/`
   - `team-agents/shared/reviews/TASK-20260220-002.md`
 - Verify:
-  - URL `/task012/` accessible
+  - URL `/task013/` accessible
 - Notes/Transitions:
   - [2026-02-20 07:50 UTC] Triggered by user via nguoitaoweb
   - [2026-02-20 07:xx UTC] Spec + quote finalized from locked intake
-  - [2026-02-20 07:xx UTC] Stitch prompts prepared (desktop + mobile) with fallback package due missing API key
-  - [2026-02-20 07:xx UTC] Built Next.js App Router + Tailwind + TS 5-page premium site
-  - [2026-02-20 07:xx UTC] QA PASS (lint/build/routes/SEO/responsive checks)
-  - [2026-02-20 07:xx UTC] Deployed static export to `docs/task012/` and pushed to `main`
-  - [2026-02-20 07:56 UTC] Public URL verified live (HTTP 200): `https://tkttv001.github.io/testopenclaw/task012/`
+  - [2026-02-20 10:49 UTC] Strict Stitch-only rebuild requested (no fallback design)
+  - [2026-02-20 10:xx UTC] Stitch MCP verified with API key; real desktop+mobile screens generated in `stitch-real/`
+  - [2026-02-20 10:xx UTC] Rebuilt site directly from Stitch HTML outputs (desktop+mobile by route)
+  - [2026-02-20 10:xx UTC] QA PASS (Stitch evidence + build/routes/SEO checks)
+  - [2026-02-20 10:xx UTC] Deployed static export to `docs/task013/` and pushed to `main`
+  - [2026-02-20 10:xx UTC] Public URL target: `https://tkttv001.github.io/testopenclaw/task013/`
 
 ### TASK-20260220-001
 - Title: Personal website pipeline with Stitch design (Ronin style)

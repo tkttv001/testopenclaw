@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/task013/_next/static/chunks/2f236954d6a65e12.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+0:{"buildId":"a5gRRQvyc_ME_N8fCAPBF","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-[#111]","children":[["$","iframe",null,{"className":"hidden md:block h-screen w-full border-0","title":"signature-desktop","src":"/stitch/desktop/signature.html"}],["$","iframe",null,{"className":"block md:hidden h-screen w-full border-0","title":"signature-mobile","src":"/stitch/mobile/signature.html"}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+4:null

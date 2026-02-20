@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mobile Chef Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#111111",
+                        "ivory": "#fdfaf0",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Epilogue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- Sticky Top Nav -->
+<nav class="sticky top-0 z-50 w-full backdrop-blur-md bg-background-dark/80 border-b border-primary/10">
+<div class="flex items-center justify-between px-6 h-16 max-w-[390px] mx-auto">
+<div class="text-primary font-bold tracking-tighter text-xl">
+                CHEF <span class="text-ivory font-light">V|N</span>
+</div>
+<button class="flex items-center gap-2 text-ivory">
+<span class="text-xs uppercase tracking-[0.2em] font-medium">Menu</span>
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</nav>
+<main class="max-w-[390px] mx-auto pb-24">
+<!-- Hero Section -->
+<section class="relative h-[75vh] w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10"></div>
+<img alt="Signature Dish" class="absolute inset-0 w-full h-full object-cover" data-alt="Cinematic vertical shot of a gold-leafed fine dining dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUsrvA-x6ppt6-vNNxiJUG_m9U-WTrEsRONnaK4tOYqQpZOCf9rO8snnM1J3zXS3pWHL6bF_cA-mW-1O0OOuQ6mv04tN7zzKMLKKhVgnY0GU7nGdHNCySovw0bTsdwcp3Bb5EdbSvbXsHMpDt3ndeZjMl-QMhu6RHv9WHd6X_J-k3wY8pVBLAjxvedFDVOZgR_0_5Nc3C4_qAvj9D_0RQVoTYXGMzd51pplwPqE_j-MckeZIdAO122usJmjrJ1fO25u3ASz8VYYI0g"/>
+<div class="absolute inset-0 z-20 flex flex-col justify-end px-6 pb-12">
+<h1 class="text-ivory text-4xl md:text-5xl font-bold leading-[1.1] mb-6 tracking-tight">
+                    The Art of <br/>
+<span class="italic font-light">Cultural Synthesis</span>
+</h1>
+<button class="bg-primary hover:bg-primary/90 text-background-dark font-bold py-4 px-8 rounded-lg transition-all active:scale-95 flex items-center justify-center gap-3 shadow-xl shadow-primary/20 w-full">
+<span>Book an Experience</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Accolades Strip -->
+<section class="py-6 border-y border-primary/10 bg-primary/5">
+<div class="flex justify-around items-center px-4 opacity-80">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">star_rate</span>
+<span class="text-[10px] uppercase tracking-[0.15em] font-semibold text-ivory/70">Michelin Star</span>
+</div>
+<div class="w-px h-4 bg-primary/20"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">workspace_premium</span>
+<span class="text-[10px] uppercase tracking-[0.15em] font-semibold text-ivory/70">James Beard Honoree</span>
+</div>
+</div>
+</section>
+<!-- Signature Highlights -->
+<section class="py-12">
+<div class="px-6 mb-6 flex items-end justify-between">
+<h2 class="text-ivory text-2xl font-bold">Signature Highlights</h2>
+<div class="flex gap-1 pb-1">
+<div class="w-6 h-1 bg-primary rounded-full"></div>
+<div class="w-2 h-1 bg-primary/30 rounded-full"></div>
+<div class="w-2 h-1 bg-primary/30 rounded-full"></div>
+</div>
+</div>
+<div class="flex gap-4 overflow-x-auto px-6 hide-scrollbar snap-x snap-mandatory">
+<!-- Card 1 -->
+<div class="min-w-[280px] snap-center bg-zinc-900/50 rounded-xl overflow-hidden border border-white/5 group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Hanoi Roots" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Traditional Vietnamese pho ingredients in a luxury setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0AfeGYfwYI96IIYqxw6tSlVJhQ-_AKXPaG6zgqdMDKiytBXsoVijxM5GCsRloQJgDP_RlTC1JzSUyy9z1stICX5ytxuv71obSbhL_5IJnBj--N3PWJCOM3G5KFnN4muGjoWFB4xJBrQ6ljceFPDEPHKos2rwgXNOuG7U2YZCOrSa0fAjHZMofQqvYRpG01F-FLacn55JCbdgNrTLYNNTrzmBMFYJlcSgGNM0mUsC_WyMJtCILQyhp6XhkiTPnKZ99xKv0Amcm0Dz4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+</div>
+<div class="p-5">
+<h3 class="text-primary font-bold text-lg mb-1">Hanoi Roots</h3>
+<p class="text-ivory/60 text-sm leading-relaxed">The soul of Vietnamese tradition, reimagined with local seasonal bounty.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[280px] snap-center bg-zinc-900/50 rounded-xl overflow-hidden border border-white/5 group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Manhattan Precision" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern geometric food plating on a dark slate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUS0einlVNGQokpFzqn1-2JM0vAP2umS5d_So9qGuB_rF5Nvu3YfY5siHvPD1W_xFk4Ew5kU_V9SLEwkfv6dtqNqnQwzHwhwcxY_2ZopH7I4L0qhVoUoP879zFpravySITdlrUOOySnb8IeSCWiqyw54PDdP1NOnkCD6FJjnrWZ2dX8EthkbG0_YkMfYrZCDCKiexgRxfl11JIfBmVhFnE4_aO6cCCwrPPQvfMvURKsajiqC85yBQchnT-4vPFxhEh-62t7Lzh9VsL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+</div>
+<div class="p-5">
+<h3 class="text-primary font-bold text-lg mb-1">Manhattan Precision</h3>
+<p class="text-ivory/60 text-sm leading-relaxed">Technical mastery meets urban intensity in every meticulously plated dish.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[280px] snap-center bg-zinc-900/50 rounded-xl overflow-hidden border border-white/5 group">
+<div class="relative h-48 overflow-hidden">
+<img alt="The Fusion" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Abstract colorful fusion dish with vibrant sauces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCszL0Nc69M7mgcJETxFJnf4CIb0y6uCY7R_4GsjLdjZYzBrUGivMdrBe4baG0eGPjktVlz3Uh_UxzXIoOCeOEK07W1L8B6B1JslR6h3YG0lSWFecE0e30KAYdi9WjeO3TcFgfz_UkxAtd0_8NumIFbI67gvL04wPFzISLPMWwFYgIZ3Sw4afUthCjc_v5fhmvs16BlEzGuPr4T8Dlmj6y4wUiPgqcxzwYah0PzfPANmf597unu4r8aIcPLdxGmI5KlnH6vNGhRBVGz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+</div>
+<div class="p-5">
+<h3 class="text-primary font-bold text-lg mb-1">The Fusion</h3>
+<p class="text-ivory/60 text-sm leading-relaxed">The breathtaking intersection where East meets West on your palate.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Brief About/Bio -->
+<section class="px-6 py-8 bg-primary/5 rounded-2xl mx-6 mb-12">
+<h4 class="text-primary text-xs uppercase tracking-widest font-bold mb-3">The Vision</h4>
+<p class="text-ivory text-lg leading-relaxed font-light italic">
+                "Cuisine is the only art form that engages all five senses at once. My mission is to ensure each sense tells a different part of the same story."
+            </p>
+<div class="mt-4 flex items-center gap-3">
+<div class="h-px flex-1 bg-primary/20"></div>
+<span class="text-ivory/40 text-[10px] uppercase font-bold tracking-widest leading-none">Chef Vin Nguyen</span>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-background-dark/95 backdrop-blur-xl border-t border-white/5 safe-area-bottom max-w-[390px] mx-auto">
+<div class="flex justify-around items-center px-4 py-3">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-[10px] font-medium tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-ivory/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">restaurant_menu</span>
+<span class="text-[10px] font-medium tracking-wide">Menus</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-ivory/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">gallery_thumbnail</span>
+<span class="text-[10px] font-medium tracking-wide">Gallery</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-ivory/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+<span class="text-[10px] font-medium tracking-wide">Reserve</span>
+</a>
+</div>
+<!-- iOS Indicator bar area -->
+<div class="h-5 w-full"></div>
+</div>
+</body></html>

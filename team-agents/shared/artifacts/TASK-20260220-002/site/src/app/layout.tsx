@@ -5,7 +5,7 @@ import "./globals.css";
 const playfair = Playfair_Display({ variable: "--font-display", subsets: ["latin"] });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
-const siteUrl = "https://tkttv001.github.io/testopenclaw/task012/";
+const siteUrl = "https://tkttv001.github.io/testopenclaw/task013/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

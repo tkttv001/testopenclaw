@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mobile Signature Concepts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#eebd2b",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221d10",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"],
+              "serif-italic": ["Playfair Display", "serif"],
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .gold-border {
+            border: 1.5px solid #eebd2b;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">restaurant_menu</span>
+<h1 class="text-lg font-bold tracking-tight uppercase">Signature Concepts</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<main class="max-w-[390px] mx-auto pb-24">
+<!-- Content Stack -->
+<div class="flex flex-col gap-12 p-6">
+<!-- Card 1 -->
+<div class="flex flex-col gap-4">
+<div class="relative group">
+<div class="gold-border rounded overflow-hidden aspect-[4/5] bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Gourmet seared wagyu beef with lemongrass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1-qFYvCqJIPN99Amm1ZCelxJdP6JUQ5GMrN5KE5gNnq3f05Hveyi7x_sbhHZbMgHb_AeIZ1k1R5yiHvM8zRoY8y0JbHbWrhouxMydbMC-X9sIIy6n4JXHRVsqRL6H0xi0eQ9uGg3jll82ikqM-5000tRBeTA3-AzDXgYVljCdNGdqJHSxAQpTl6o6YPJRuNySLhqmU2G0hB6xpTCdwaLe3t-9eliMJ462HfUb1nltmVh3cgLOV_2x7IJhe33ux4070p-45b2Bx4Aq"/>
+</div>
+<div class="absolute top-4 right-4">
+<span class="px-3 py-1 bg-white/90 backdrop-blur text-[10px] font-bold tracking-widest uppercase rounded-full border border-primary text-primary">
+                            Private Dining
+                        </span>
+</div>
+</div>
+<div class="space-y-2">
+<h2 class="text-2xl font-bold tracking-tight">The Silk Road</h2>
+<p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 line-clamp-2">
+                        Slow-roasted American brisket meets a traditional Vietnamese pho-spiced reduction. A soulful bridge between Texas smoke and Hanoi aromatics.
+                    </p>
+<p class="font-serif-italic italic text-xs text-primary/80">
+                        Pairing Notes: Aged Cabernet Sauvignon or Smoked Oolong Tea
+                    </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-4">
+<div class="relative group">
+<div class="gold-border rounded overflow-hidden aspect-[4/5] bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Delicate scallop crudo with chili oil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOOcB1Asi_tA02NMnA0pks8xVFS-QsMb4uBfWORgJRbNit8U1dGH4dBRuRolCTW6GkPnQ9TOkB5gUE58SHFRaOMkgTt1g_n_P9fK_mslyYd69rSpczrJHxWlyYaq9x2On9-RtdiUdZR4qE-33laVi0aZk__Z-LopoNrZHwV5ZKKd6f7yGqk0dZQcfDJtVY0h4XkxMvmaBEXlD8WcNVisHPY47-dE-8f67GlwjtmDVUjxVo8GbjxZGS_JytIUsjBZbfAomhzFiMH87m"/>
+</div>
+<div class="absolute top-4 right-4">
+<span class="px-3 py-1 bg-white/90 backdrop-blur text-[10px] font-bold tracking-widest uppercase rounded-full border border-primary text-primary">
+                            Chef's Table
+                        </span>
+</div>
+</div>
+<div class="space-y-2">
+<h2 class="text-2xl font-bold tracking-tight">Pacific Fusion</h2>
+<p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 line-clamp-2">
+                        Seared Atlantic scallops over lemongrass-infused corn puree. Topped with house-made chili oil and micro-shiso for a vibrant finish.
+                    </p>
+<p class="font-serif-italic italic text-xs text-primary/80">
+                        Pairing Notes: Chilled Junmai Ginjo Sake
+                    </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-4">
+<div class="relative group">
+<div class="gold-border rounded overflow-hidden aspect-[4/5] bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Pork belly sliders with pickled vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq8rfwmh_uB9P8Ka5gXg6VYVx8nsXx_S-7-g0xsaI4me8c3BGm5wzyntkPTOIqACyknSTKHcgCd9UYuktqvxHVxmHkuagX0dQp9ks8hOPvM8AdKcl_rrXP7CZLgEoSjQvUB0D1zwqSOUvQJquMyBSzoTrzRBQO_Ai7VKPzx7xZpO9SD0rRdMK_cVuTkM3eUVGAJ0tdRZvnB-TufeMEBBZGYEXNDtIqyCq6quZ9FDESQ80B1Up6_lSSHF4W_PzIU4lkKxc9KymFfZ4T"/>
+</div>
+<div class="absolute top-4 right-4">
+<span class="px-3 py-1 bg-white/90 backdrop-blur text-[10px] font-bold tracking-widest uppercase rounded-full border border-primary text-primary">
+                            Pop-up Event
+                        </span>
+</div>
+</div>
+<div class="space-y-2">
+<h2 class="text-2xl font-bold tracking-tight">Hanoi Nights</h2>
+<p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 line-clamp-2">
+                        Street-food inspired pork belly sliders with pickled daikon and a smoky bourbon glaze. An elevated nod to night market culture.
+                    </p>
+<p class="font-serif-italic italic text-xs text-primary/80">
+                        Pairing Notes: Craft IPA or Smoked Black Tea
+                    </p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col gap-4">
+<div class="relative group">
+<div class="gold-border rounded overflow-hidden aspect-[4/5] bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Modern interpretation of Vietnamese dessert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMJMxrVjT2dc3ZGZFt8TjUtQNN0y1UN_HROSwp2gBN_QjIjUHaGuCWsvLjEs_m1L99dqWAHcp-wnPKOllsNpO_DHOS3kSez57IjzS1uwfoEsQC9Tnvon8-_Z3majKjlTSx-KVwgTdLXFjnhytpuBsKCQwyhyeXKWbuFkW1cSX_iyPlqsrXhmfNU50gYsxwCtcFQK-kpN1T39SQ9tQSZAPmRCgbvq5RpDqXMG5D7htdEtTYjNibEAag5bqmF7L4YsmEYECgf56SlnMx"/>
+</div>
+<div class="absolute top-4 right-4">
+<span class="px-3 py-1 bg-white/90 backdrop-blur text-[10px] font-bold tracking-widest uppercase rounded-full border border-primary text-primary">
+                            Degustation
+                        </span>
+</div>
+</div>
+<div class="space-y-2">
+<h2 class="text-2xl font-bold tracking-tight">Heritage Harvest</h2>
+<p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 line-clamp-2">
+                        Roasted root vegetables with a ginger-honey miso glaze. Garnished with toasted sesame and hand-picked garden herbs.
+                    </p>
+<p class="font-serif-italic italic text-xs text-primary/80">
+                        Pairing Notes: Chardonnay with light oak
+                    </p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="flex flex-col gap-4">
+<div class="relative group">
+<div class="gold-border rounded overflow-hidden aspect-[4/5] bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Tuna tartare with citrus and herbs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM-zz5lB_DEQh9AcassEly4vzFrs8IGMZTqeqQ2ujouQhOtAF2zeelVsV-m89xy3DimVv4ZGwiQS0MBvl_myr5WRWQ7p4Zpkj4ApU8bxs9nDV0Ajbj3d13-XFDfBmzSAAmz6IWK90TkkmxWKdCC3XiIPR25cvUeSil3J3B7LG-B97Tcuyj8ZVnl31sWpZxYeK4ZD6jo8l0OCHbHl9aAuD2J6g6q1pNA95nJj3j_D7l92Lbgw0pP44-yVwOhuPKsDr5Tv6PcBEQDeFE"/>
+</div>
+<div class="absolute top-4 right-4">
+<span class="px-3 py-1 bg-white/90 backdrop-blur text-[10px] font-bold tracking-widest uppercase rounded-full border border-primary text-primary">
+                            Curated Table
+                        </span>
+</div>
+</div>
+<div class="space-y-2">
+<h2 class="text-2xl font-bold tracking-tight">Indigo Sea</h2>
+<p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 line-clamp-2">
+                        Line-caught tuna tartare with yuzu, fish sauce caramel, and crispy shallots. A refreshing balance of salt, acid, and crunch.
+                    </p>
+<p class="font-serif-italic italic text-xs text-primary/80">
+                        Pairing Notes: Sparkling Rosé or Jasmine Pearl Tea
+                    </p>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="flex flex-col gap-4">
+<div class="relative group">
+<div class="gold-border rounded overflow-hidden aspect-[4/5] bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Fine dining presentation of lamb" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz2F9YJwRrpfpzbJCmNVo7q6Lz2hVN4yXCFJQxuMqrXeMK4Z2_JcevewubI9MCApTbI29PITfxT9wrv9YLDa7YCWyOyd7IRNScg6kM-tJqPDNviPyP0TOHDKci8duRMeoYCvMIQa5uOCt3syIpsAcOXl61kjm9gLQ1oRW2n7Boj9I1-2rlY_SA3iCDqaDy3LmCzfQJFAQaA6UTJBo2pKwcocL3LVZzaGdz8NXvHEI0IP3trEok8135-YxWudI0Hreq36oc_YJDAdSV"/>
+</div>
+<div class="absolute top-4 right-4">
+<span class="px-3 py-1 bg-white/90 backdrop-blur text-[10px] font-bold tracking-widest uppercase rounded-full border border-primary text-primary">
+                            Signature
+                        </span>
+</div>
+</div>
+<div class="space-y-2">
+<h2 class="text-2xl font-bold tracking-tight">Delta Dawn</h2>
+<p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 line-clamp-2">
+                        Herbed lamb rack served with a tamarind-mint jus and creamy polenta. A bold interplay of Southern comfort and Mekong tang.
+                    </p>
+<p class="font-serif-italic italic text-xs text-primary/80">
+                        Pairing Notes: Full-bodied Syrah or Darjeeling
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-primary/10 px-6 pb-6 pt-3 flex justify-between items-center safe-area-inset-bottom">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">auto_awesome</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Concepts</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">collections</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Gallery</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Contact</span>
+</a>
+</nav>
+</body></html>

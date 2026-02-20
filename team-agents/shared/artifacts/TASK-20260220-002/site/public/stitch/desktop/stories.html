@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Culinary Stories &amp; Notes | Premium Chef Journal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c6a15d",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#111111",
+                        "neutral-dark": "#1e1a14",
+                        "muted-gold": "rgba(198, 161, 93, 0.2)",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+        .gold-gradient-overlay {
+            background: linear-gradient(to top, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-12 lg:px-24">
+<div class="mx-auto flex max-w-7xl items-center justify-between py-5">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">restaurant_menu</span>
+<h1 class="text-xl font-bold tracking-tight text-slate-100">Culinary Stories <span class="text-primary">&amp;</span> Notes</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-100 hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-primary underline underline-offset-8 decoration-2" href="#">Journal</a>
+<a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="#">Archive</a>
+<a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="#">Philosophy</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-neutral-dark border border-primary/20 rounded-lg px-3 py-1.5">
+<span class="material-symbols-outlined text-primary/60 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-40 placeholder:text-slate-500" placeholder="Search insights..." type="text"/>
+</div>
+<button class="bg-primary text-background-dark px-6 py-2 rounded-lg text-sm font-bold tracking-wide hover:brightness-110 transition-all uppercase">
+                        Newsletter
+                    </button>
+<div class="h-10 w-10 rounded-full border border-primary/30 bg-cover bg-center" data-alt="Portrait of a professional chef in black uniform" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyfjn9yQFwyDLqvgceWVNPZcPQBbFXTEsvfCb6XuZ6Y70TgmBsxu3uG3qVoXsePuHs9amOtDSfaOeUDQ_9S9LKFK2WZPWmypBcbh4jjkvk_YJp1nN-E9BYLC4gKDHhqs6N7vQDbN1oW1aBG4KZHdHyF5QxZrM2zAg1i2xItYfUJl1i_TNa5W40CI1Nep0wP0spV1cJbFDNY0ptQ2yFTPCvGGc63v8lRdAg3HZsw9eIRFgSUxbXU6nzq37BGiCYUrPvSEvA-WqdxAYb')"></div>
+</div>
+</div>
+</header>
+<main class="mx-auto w-full max-w-7xl px-6 py-12 md:px-12 lg:px-24">
+<!-- Featured Story Section -->
+<section class="mb-20">
+<div class="group relative flex flex-col lg:flex-row overflow-hidden rounded-xl bg-neutral-dark editorial-shadow border border-primary/5">
+<div class="relative h-[400px] lg:h-[550px] w-full lg:w-3/5 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Traditional Vietnamese fish sauce fermentation barrels in dark room" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAi6TZ52m8QOMEHQz0BTPDKpyp6lRxY_yQ99eEf-MoQMDbRrFwM1p-mkshwcq2_8v7ktNRRWYThR6Sers_DWBx9PtDtkFIPpNbf9XHHa_VwKI-s9bQVTnG1weyRCfT1KiTwKi8SCgzKTIVZzQWJl2xr7jNAaFebqhrJ1CPh8xpzc046b5SZSeR21LHqhQH2-Op12l4c5MT3XEpgijo8TrBOQ-PMr_2mJtK_83gDdY71N9VzEwTxL1SspskoMPjsXl-hNMZyaLiT46D1')"></div>
+<div class="absolute inset-0 gold-gradient-overlay lg:hidden"></div>
+</div>
+<div class="flex flex-col justify-center p-8 lg:p-16 lg:w-2/5">
+<span class="mb-4 inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary">Origin &amp; Technique</span>
+<h2 class="mb-6 text-4xl lg:text-5xl font-bold leading-tight text-slate-100">The Soul of Fish Sauce</h2>
+<p class="mb-8 text-lg leading-relaxed text-slate-400">
+                            A deep dive into traditional fermentation practices in Phú Quốc and their sophisticated evolution in modern global fine dining.
+                        </p>
+<div class="flex items-center justify-between border-t border-primary/10 pt-8">
+<div class="text-sm font-medium text-slate-500">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span> 12 min read</span>
+</div>
+<button class="group flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-sm">
+                                Read Full Story
+                                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Grid Header -->
+<div class="mb-10 flex items-end justify-between border-b border-primary/10 pb-6">
+<div>
+<h3 class="text-3xl font-bold text-slate-100">Latest Notes</h3>
+<p class="mt-2 text-slate-500">Field observations, seasonal shifts, and culinary experiments.</p>
+</div>
+<div class="flex gap-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full border border-primary/20 text-primary hover:bg-primary/10">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-full border border-primary/20 text-slate-500 hover:text-primary hover:bg-primary/10">
+<span class="material-symbols-outlined">reorder</span>
+</button>
+</div>
+</div>
+<!-- Stories Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Story Card 1 -->
+<article class="group flex flex-col">
+<div class="mb-6 aspect-[4/3] overflow-hidden rounded-lg">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Beautifully plated gourmet dish with geometric precision" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYOGOQztJDshwp4WN36HNV_3FirIlLlKGOCQeRQpVbwljrXUnKv1YfvpGOwx_pWC282Z6Gac1doOP4Rc2csjMbSwYtmGLH1zTUvz7d0nNtu2TTvf4rKr0q-X0Fv2h12hbZe1a3jLm40Yao6RHIZcRduX69OZdDhgyh6XDPuEO0mi3RwcmGuJVfyOpZ5_-EfWmm3cZZRuHb8H357SeIiMmwKH2VXw873dRHBwMgXioHpfa97z4nJWM8jWcElMw__OXhv--QHUeO9vg1')"></div>
+</div>
+<div class="flex flex-col flex-1">
+<div class="mb-3 flex items-center gap-3">
+<span class="text-[10px] font-black uppercase tracking-tighter text-primary bg-primary/10 px-2 py-0.5 rounded">Artistry</span>
+<span class="text-xs text-slate-500">Oct 24, 2023</span>
+</div>
+<h4 class="mb-3 text-xl font-bold text-slate-100 group-hover:text-primary transition-colors">The Geometry of Plating</h4>
+<p class="mb-6 line-clamp-2 text-sm leading-relaxed text-slate-400">
+                            Exploring the intersection of architectural precision and organic movement on the canvas of a ceramic plate.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-widest">5 min read</span>
+<a class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" href="#">north_east</a>
+</div>
+</div>
+</article>
+<!-- Story Card 2 -->
+<article class="group flex flex-col">
+<div class="mb-6 aspect-[4/3] overflow-hidden rounded-lg">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Autumn landscape in Hudson Valley with colorful fall foliage" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhLR_EKRJdmnqfamQdg59bS4Q-aMeDilcelPmYV_BswcRvUaOURxleYI6L-doe2wJSS4VBa64ha8xMEyCgz_kBh0RtWro-efzrqiMh4Cp2kZ70rg386NUGL0xWogbI62LKYeWRGGfeTon9iyRJoEYVyD_EuLLaGU6USjJBAdCM6s18uIBaPWXOebQ7TdYYkmZxTs_X-dkDYeBuLW_iS5mC3O7ZrXiTtu_Z4zoAG7Vm_X0ag25c02iRcdOQRC6DpXHSUe3mKf2X9XF2')"></div>
+</div>
+<div class="flex flex-col flex-1">
+<div class="mb-3 flex items-center gap-3">
+<span class="text-[10px] font-black uppercase tracking-tighter text-primary bg-primary/10 px-2 py-0.5 rounded">Sourcing</span>
+<span class="text-xs text-slate-500">Oct 12, 2023</span>
+</div>
+<h4 class="mb-3 text-xl font-bold text-slate-100 group-hover:text-primary transition-colors">Autumn in the Hudson Valley</h4>
+<p class="mb-6 line-clamp-2 text-sm leading-relaxed text-slate-400">
+                            A culinary journey through New York's heritage orchards and the unique flavor profiles of heirloom apple varieties.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-widest">8 min read</span>
+<a class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" href="#">north_east</a>
+</div>
+</div>
+</article>
+<!-- Story Card 3 -->
+<article class="group flex flex-col">
+<div class="mb-6 aspect-[4/3] overflow-hidden rounded-lg">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Vibrant array of exotic spices in a market stall" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIMI_suC5uUTJiELh77P21TfEokvj2_hFyQ4D2MdUeGYc5rdwJLHZNL0rZ1CbMRGfiOh_7dcgRhhEd5fWVaGy5imn8HmUU4rDDy55kXQMYtS3TeC7Oog-jpZhhO3-ksW29EOY-egoAA5Bp99rSWubK3npUDHH5XJw7y2pCus-O4veWiCzlfe3e9V95uH0A5TRnDtuEJh0aE0i6liLcpvd3vS8eKO8yxs4J7bUrjnGsWo-gS5hO6xg0hEOINfhxoccRMQfnnjYEKI9E')"></div>
+</div>
+<div class="flex flex-col flex-1">
+<div class="mb-3 flex items-center gap-3">
+<span class="text-[10px] font-black uppercase tracking-tighter text-primary bg-primary/10 px-2 py-0.5 rounded">Heritage</span>
+<span class="text-xs text-slate-500">Sep 28, 2023</span>
+</div>
+<h4 class="mb-3 text-xl font-bold text-slate-100 group-hover:text-primary transition-colors">Sourcing the Silk Road</h4>
+<p class="mb-6 line-clamp-2 text-sm leading-relaxed text-slate-400">
+                            Tracing the global influence of ancient spice routes on contemporary Vietnamese aromatics and American fusion.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-widest">10 min read</span>
+<a class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" href="#">north_east</a>
+</div>
+</div>
+</article>
+<!-- Story Card 4 -->
+<article class="group flex flex-col">
+<div class="mb-6 aspect-[4/3] overflow-hidden rounded-lg">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Chef's hand meticulously arranging microgreens on a dish" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6LxwpmYPi4OSaLcwKidzgPSaHC1IhtcbwSzXDMOEz2feWLARFlkgdV6yRVFDlWXfgVZ-Moh68ciXyLqDb0GSNTqzqTjrRO-suC4bYrPmPsisYTrmouTDaAbr73y__Jv0JIxN0-rAn6nxSBTbm4MocKCkLCrTca5No1wIfik9n_2L-z2-8RoYunndT6kCil_js2zpvWDC3dpbhBB8yWoynydywe1eJaQsP9lVVZQlv2MClWLjbD_gjZPtdRFak-z5qlxIEqySI8oC_')"></div>
+</div>
+<div class="flex flex-col flex-1">
+<div class="mb-3 flex items-center gap-3">
+<span class="text-[10px] font-black uppercase tracking-tighter text-primary bg-primary/10 px-2 py-0.5 rounded">Mindset</span>
+<span class="text-xs text-slate-500">Sep 15, 2023</span>
+</div>
+<h4 class="mb-3 text-xl font-bold text-slate-100 group-hover:text-primary transition-colors">The Quiet Kitchen</h4>
+<p class="mb-6 line-clamp-2 text-sm leading-relaxed text-slate-400">
+                            On the importance of silence, discipline, and intentionality during the final hour of mise en place.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-widest">6 min read</span>
+<a class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" href="#">north_east</a>
+</div>
+</div>
+</article>
+<!-- Story Card 5 -->
+<article class="group flex flex-col">
+<div class="mb-6 aspect-[4/3] overflow-hidden rounded-lg">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Bowl of steaming hot traditional Vietnamese Pho" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuNQuwKNKxGqLlPQOxDlj2j8RRbldmMqFBmAQ2BM60YFoAbh696BnRzkk287k6eoNtbGvyhD85GMMSCZhdfh9LXO7ltEw-2AB3iyL47mQ_KRj_eF_8JCw9sw4o7422agdMhxDIe0zQyKO9Jd82VLYsYjpZUI32CEqpiVMVVfITo4H7ZguibuaR94qRPvaU8mYdmQcyOGeyWccqlozKxNFsm-0JLw-mLQsGeIl5x3fdP-6DoFhuy8yf_PhA8z3IzQVOdvkL72epXhi2')"></div>
+</div>
+<div class="flex flex-col flex-1">
+<div class="mb-3 flex items-center gap-3">
+<span class="text-[10px] font-black uppercase tracking-tighter text-primary bg-primary/10 px-2 py-0.5 rounded">Culture</span>
+<span class="text-xs text-slate-500">Aug 30, 2023</span>
+</div>
+<h4 class="mb-3 text-xl font-bold text-slate-100 group-hover:text-primary transition-colors">Defining Umami</h4>
+<p class="mb-6 line-clamp-2 text-sm leading-relaxed text-slate-400">
+                            Bridging the gap between western savory concepts and the complex salinity of Southeast Asian broths.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-widest">15 min read</span>
+<a class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" href="#">north_east</a>
+</div>
+</div>
+</article>
+<!-- Newsletter Card -->
+<article class="flex flex-col justify-center rounded-lg border-2 border-dashed border-primary/20 bg-primary/5 p-8 text-center">
+<span class="material-symbols-outlined text-5xl text-primary mb-6">mail</span>
+<h4 class="mb-3 text-2xl font-bold text-slate-100">Chef's Table Monthly</h4>
+<p class="mb-8 text-sm text-slate-400 leading-relaxed">
+                        Join 5,000+ culinary professionals. Get exclusive recipes and sourcing notes delivered to your inbox.
+                    </p>
+<div class="space-y-4">
+<input class="w-full rounded-lg bg-background-dark border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary text-sm" placeholder="Your email address" type="email"/>
+<button class="w-full bg-primary py-3 rounded-lg text-background-dark font-bold text-xs uppercase tracking-[0.2em] hover:brightness-110 transition-all">Subscribe Now</button>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-24 flex items-center justify-center gap-2">
+<a class="flex h-12 w-12 items-center justify-center rounded-lg border border-primary/20 text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-background-dark font-bold" href="#">1</a>
+<a class="flex h-12 w-12 items-center justify-center rounded-lg border border-primary/20 text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">2</a>
+<a class="flex h-12 w-12 items-center justify-center rounded-lg border border-primary/20 text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">3</a>
+<span class="px-2 text-slate-600">...</span>
+<a class="flex h-12 w-12 items-center justify-center rounded-lg border border-primary/20 text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">12</a>
+<a class="flex h-12 w-12 items-center justify-center rounded-lg border border-primary/20 text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-20 border-t border-primary/10 bg-neutral-dark/30 py-16 px-6 md:px-12 lg:px-24">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-col md:flex-row justify-between gap-12">
+<div class="max-w-sm">
+<div class="flex items-center gap-3 text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">restaurant_menu</span>
+<span class="text-lg font-bold tracking-tight text-slate-100 uppercase">Culinary Stories</span>
+</div>
+<p class="text-sm leading-relaxed text-slate-500">
+                            A chronicle of flavor, tradition, and the relentless pursuit of culinary excellence. Bridging the heritage of the East with the innovation of the West.
+                        </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+<div>
+<h5 class="mb-6 text-xs font-bold uppercase tracking-widest text-slate-100">Journal</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">Technique</a></li>
+<li><a class="hover:text-primary" href="#">Origins</a></li>
+<li><a class="hover:text-primary" href="#">Philosophy</a></li>
+<li><a class="hover:text-primary" href="#">Photography</a></li>
+</ul>
+</div>
+<div>
+<h5 class="mb-6 text-xs font-bold uppercase tracking-widest text-slate-100">Projects</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">Hudson Pop-up</a></li>
+<li><a class="hover:text-primary" href="#">Vietnam Residency</a></li>
+<li><a class="hover:text-primary" href="#">Fermentation Lab</a></li>
+</ul>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<h5 class="mb-6 text-xs font-bold uppercase tracking-widest text-slate-100">Social</h5>
+<div class="flex gap-4">
+<a class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 flex flex-col md:flex-row items-center justify-between border-t border-primary/5 pt-8 text-[10px] uppercase tracking-[0.2em] text-slate-600">
+<p>© 2024 Culinary Stories &amp; Notes. All Rights Reserved.</p>
+<div class="mt-4 flex gap-8 md:mt-0">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

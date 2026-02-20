@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
-const base = "https://tkttv001.github.io/testopenclaw/task012";
+const base = "https://tkttv001.github.io/testopenclaw/task013";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return ["", "/about/", "/projects/", "/blog/", "/contact/"].map((path) => ({

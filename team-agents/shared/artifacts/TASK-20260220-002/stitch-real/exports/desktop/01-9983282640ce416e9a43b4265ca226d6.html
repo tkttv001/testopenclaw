@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chef Portfolio | The Art of Cultural Synthesis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c6a15d",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#161512",
+                        "charcoal": "#1e1a14",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .text-ivory { color: #f8f7f6; }
+        .bg-ivory { background-color: #f8f7f6; }
+        .border-gold { border-color: #c6a15d; }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(22, 21, 18, 0.3) 0%, rgba(22, 21, 18, 0.8) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">restaurant_menu</span>
+</div>
+<h2 class="text-slate-100 text-xl font-extrabold tracking-tighter uppercase">Chef Portfolio</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-slate-300 hover:text-primary text-sm font-medium tracking-widest uppercase transition-colors" href="#">Our Story</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium tracking-widest uppercase transition-colors" href="#">Signature Dishes</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium tracking-widest uppercase transition-colors" href="#">Accolades</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium tracking-widest uppercase transition-colors" href="#">Experience</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-background-dark px-6 py-2 rounded-lg text-sm font-bold uppercase tracking-wider hover:bg-primary/90 transition-all">
+                    Book an Experience
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Cinematic Hero Section -->
+<section class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 hero-gradient z-10"></div>
+<img alt="Signature Dish Close-up" class="w-full h-full object-cover" data-alt="Close-up of a high-end signature gourmet dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKUfDG3gm4G46hzp6dbVr8KiUvZNQ2xEx0tlHPidnn71jNPncjcs1Y3p37dgdANDFxJ-FzgG8erZrAV4ibfbFH54NRqrs9pTXmxrOjrmXSjNLkk0W-64scigWHMndXiYI7DCuUuaFy9mCY_pRci88ETa-xhpurP-LKa3W_nCj4GuqXUFY9xJ99BEp9bwzULESReL79cW0u4HvqMm0i2oizciIhf0qTkN8OR2DHwwt_rGV-GVLIc3CaCgSFua42T8p00hlFTDzb0n50"/>
+</div>
+<div class="relative z-20 text-center px-4 max-w-4xl">
+<span class="text-primary font-medium tracking-[0.4em] uppercase mb-4 block animate-fade-in">A Culinary Journey</span>
+<h1 class="text-slate-100 text-5xl md:text-8xl font-black leading-tight tracking-tight mb-8">
+                    The Art of <br/>
+<span class="text-primary italic font-light">Cultural Synthesis</span>
+</h1>
+<p class="text-slate-300 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto">
+                    Experience a masterful fusion of Hanoi heritage and Manhattan precision through the lens of modern fine dining.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-4">
+<button class="w-full md:w-auto bg-primary text-background-dark px-10 py-4 rounded-lg text-base font-bold uppercase tracking-widest hover:scale-105 transition-transform">
+                        Book an Experience
+                    </button>
+<button class="w-full md:w-auto border border-slate-500 text-slate-100 px-10 py-4 rounded-lg text-base font-bold uppercase tracking-widest hover:bg-slate-100 hover:text-background-dark transition-all">
+                        View Menu
+                    </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+<span class="text-primary/50 text-xs tracking-widest uppercase">Explore</span>
+<div class="w-px h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<!-- Signature Highlights Grid -->
+<section class="bg-charcoal py-24 px-6 md:px-20">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-2">Portfolio</h2>
+<h3 class="text-slate-100 text-4xl font-bold tracking-tight">Signature Highlights</h3>
+</div>
+<p class="text-slate-400 max-w-md italic">
+                        "Every dish is a bridge between two worlds, crafted with the discipline of New York and the soul of Vietnam."
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Hanoi Roots -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-background-dark border border-white/5 hover:border-primary/50 transition-all">
+<img alt="Hanoi Roots" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="Traditional Vietnamese ingredients with modern plating" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU6wQgr69QAfrTbZPq6Hk5BkIyfqyKsgwGa1GYmPFe-yL0Flo7Fyfc76vHpY0kN74a-pEP-qV05Omwre3t2j4dLV_M9Nh8IEz1msyIzyM7aD8QMOCuXBn0zpBR15vdeXLUQitDZjgENUPR2UqnoREKoeOLQ2zZGnigcrzP-h8gPwInQ8X1WXysiNnZQVBl6AnsVBVAhymx_ZdBN8RzyC1X9E1ERqjLagIYtxd88KOj49VVdZaAn0k0MEH6L6TmvmBCUizJCcf73QD3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h4 class="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-3">Legacy</h4>
+<h5 class="text-slate-100 text-2xl font-bold mb-2">Hanoi Roots</h5>
+<p class="text-slate-400 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                Deeply rooted in the vibrant street markets and ancestral recipes of Vietnam's capital city.
+                            </p>
+</div>
+</div>
+<!-- Card 2: Manhattan Precision -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-background-dark border border-white/5 hover:border-primary/50 transition-all">
+<img alt="Manhattan Precision" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="Modern New York fine dining kitchen aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsYnUvBqpHGgorLMG-glx6SE6dzQq0wgJhtHayJVdXp7Nw9UMRBxrYKMvJKQwreCx1e_xo72Sdsa0gNTQ15smghF0NJhFuAVrFRvguo7hM4ZZhuEhcdnz4wKOF6776MkeGEizXQgMnjwUpRQ0rAPjZYOvqLR66JpunBcNCCHCjGO1hsJ9N7gLF_M-kec7asDG5LzY6oc0WD6yicfegqfqrYY_QiUdvnoCqiUggvMnpoddsYOw7XM9a6ifXXIWrzh6YBsqx_YTvCyih"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h4 class="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-3">Technique</h4>
+<h5 class="text-slate-100 text-2xl font-bold mb-2">Manhattan Precision</h5>
+<p class="text-slate-400 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                Technical mastery honed in the high-pressure kitchens of New York’s Michelin-starred institutions.
+                            </p>
+</div>
+</div>
+<!-- Card 3: The Fusion -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-xl bg-background-dark border border-white/5 hover:border-primary/50 transition-all">
+<img alt="The Fusion" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="Artistic fusion dish combining eastern and western styles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7qFpeHzbe4onR410Q8jIfrxQUihV-cSysAeErEC95HEjv_8rXcVDbjZ2eDkT_JnC6jymXigFBJ0GSOousDHsx9MtQMVnrGGgwiKr-HU0eJ4WDesiGA3K124iCY3GDRQ6iV0ooyGptKeeKfr9IhLVdS6zJU9V-thyjJrXzCXIcljT3EihBgo8yfCXZo1OMp-2UyNlcT1LW7bf6lIatb9r0sTZrwW9kF5D700okf8QQUenHlvqOTkTBS-Z0Q_d2--xtkk5jAiKIQSZ2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h4 class="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-3">Evolution</h4>
+<h5 class="text-slate-100 text-2xl font-bold mb-2">The Fusion</h5>
+<p class="text-slate-400 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                Where two worlds collide to create a singular, unforgettable contemporary culinary identity.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Accolades Ribbon -->
+<section class="bg-background-dark py-12 border-y border-white/5">
+<div class="max-w-7xl mx-auto px-6 overflow-hidden">
+<p class="text-center text-primary/40 text-[10px] uppercase tracking-[0.5em] mb-8">Prestigious Recognitions</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">star</span>
+<span class="text-slate-300 font-bold tracking-widest text-sm">MICHELIN GUIDE 2023</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">workspace_premium</span>
+<span class="text-slate-300 font-bold tracking-widest text-sm">JAMES BEARD NOMINEE</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">award_star</span>
+<span class="text-slate-300 font-bold tracking-widest text-sm">50 BEST DISCOVERY</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+<span class="text-slate-300 font-bold tracking-widest text-sm">NYT CRITIC'S PICK</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Block -->
+<section class="bg-charcoal py-24 px-6">
+<div class="max-w-5xl mx-auto relative rounded-2xl overflow-hidden">
+<!-- Background with very subtle pattern -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, #c6a15d 1px, transparent 0); background-size: 40px 40px;"></div>
+<div class="relative z-10 bg-background-dark/40 border border-primary/20 p-12 md:p-20 text-center rounded-2xl backdrop-blur-sm">
+<h2 class="text-slate-100 text-3xl md:text-5xl font-bold tracking-tight mb-6">Elevate Your Next Gathering</h2>
+<p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+                        Whether it's an intimate private dinner or a masterclass in synthesis, bring the experience of fine dining to your table.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto bg-primary text-background-dark px-12 py-4 rounded-lg text-sm font-bold uppercase tracking-widest hover:bg-primary/90 transition-all">
+                            Inquire Now
+                        </button>
+<button class="w-full sm:w-auto text-primary border border-primary/30 px-12 py-4 rounded-lg text-sm font-bold uppercase tracking-widest hover:bg-primary/10 transition-all">
+                            Private Events
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-dark border-t border-white/5 py-16 px-6 md:px-20">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">restaurant_menu</span>
+<h2 class="text-slate-100 text-lg font-extrabold tracking-tighter uppercase">Chef Portfolio</h2>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                    A cross-cultural culinary journey exploring the boundaries of taste, technique, and tradition.
+                </p>
+</div>
+<div>
+<h4 class="text-slate-100 font-bold text-xs uppercase tracking-[0.2em] mb-6">Contact</h4>
+<ul class="text-slate-500 text-sm space-y-3">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">mail</span> hello@chefportfolio.com</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">location_on</span> Manhattan, NY &amp; Hanoi, VN</li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-100 font-bold text-xs uppercase tracking-[0.2em] mb-6">Social</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary text-slate-500 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">camera_alt</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary text-slate-500 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">play_circle</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary text-slate-500 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">person</span>
+</a>
+</div>
+</div>
+<div class="text-right flex flex-col items-end">
+<button class="bg-primary/10 text-primary border border-primary/20 px-4 py-2 rounded text-xs font-bold uppercase tracking-widest mb-6">
+                    Join the Newsletter
+                </button>
+<p class="text-slate-600 text-[10px] uppercase tracking-widest">© 2024 Chef Portfolio Studio. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>
